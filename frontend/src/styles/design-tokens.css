@@ -1,0 +1,84 @@
+:root {
+  /* Classic Canadian CPA Brand Palette (Inspired by Authentic Puri & Loggia Identity) */
+  --navy-950: #0B1C33;
+  --navy-900: #102A4E;
+  --navy-800: #163B6B;  /* Primary Corporate Royal Navy */
+  --navy-700: #1E4D8C;
+  --navy-600: #2962AA;
+  --navy-50:  #F0F5FA;
+
+  /* Classic Golden Amber Spectrum (from authentic PnL framed logo) */
+  --gold-700: #92400E;
+  --gold-600: #B45309;
+  --gold-500: #D97706;  /* Primary Brand Amber / Gold */
+  --gold-400: #F59E0B;
+  --gold-300: #FCD34D;
+  --gold-100: #FEF3C7;
+  --gold-50:  #FFFBEB;
+
+  /* Fresh Accent Teal (used sparingly for success/indicators) */
+  --teal-700: #0F766E;
+  --teal-600: #0D9488;
+  --teal-500: #14B8A6;
+  --teal-50:  #F0FDFA;
+
+  /* Pristine Light Surfaces & Editorial Backgrounds */
+  --surface-base: #FFFFFF;
+  --surface-alt: #F8FAFC;
+  --surface-subtle: #F1F5F9;
+  --surface-warm: #FAF9F6;
+  --border-light: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-dark: #94A3B8;
+
+  /* High-Contrast Readable Editorial Typography */
+  --text-primary: #0F294A;    /* Deep navy for primary titles */
+  --text-secondary: #334155;  /* Rich charcoal slate for body text */
+  --text-muted: #64748B;      /* Secondary captions and labels */
+  --text-light-primary: #FFFFFF;
+  --text-light-secondary: #E2E8F0;
+  --text-light-muted: #94A3B8;
+
+  /* Semantic Status */
+  --success: #15803D;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --info: #1D4ED8;
+
+  /* Typography Families */
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid Responsive Typography Scale */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.82rem + 0.25vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.06rem + 0.35vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.45rem);
+  --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.85rem);
+  --text-3xl: clamp(1.875rem, 1.65rem + 1.1vw, 2.35rem);
+  --text-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3rem);
+  --text-5xl: clamp(2.75rem, 2.3rem + 2.25vw, 3.85rem);
+
+  /* Subtle, Natural Shadows for High-End Corporate UI */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.09), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 12px 24px -4px rgba(22, 59, 107, 0.12);
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
