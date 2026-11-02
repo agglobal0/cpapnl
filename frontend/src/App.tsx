@@ -42,11 +42,6 @@ import { Terms } from './pages/Terms';
 import { NotFound } from './pages/NotFound';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 
-// Industry Pages
-import { SmallBusinessPage } from './pages/industries/SmallBusiness';
-import { RealEstatePage } from './pages/industries/RealEstate';
-import { ProfessionalServicesPage } from './pages/industries/ProfessionalServices';
-import { ECommercePage } from './pages/industries/ECommerce';
 // Additional Services & Case Studies
 import { Payroll } from './pages/services/Payroll';
 import { CaseStudiesPage } from './pages/resources/CaseStudiesPage';
@@ -115,12 +110,6 @@ export const App: React.FC = () => {
           <Route path="/services/cloud-accounting" element={<CloudAccounting onBookConsultation={openBookingModal} />} />
           <Route path="/services/payroll" element={<Payroll onBookConsultation={openBookingModal} />} />
           <Route path="/payroll" element={<Payroll onBookConsultation={openBookingModal} />} />
-
-          {/* Industry Vertical Pages */}
-          <Route path="/industries/small-business" element={<SmallBusinessPage onBookConsultation={openBookingModal} />} />
-          <Route path="/industries/real-estate" element={<RealEstatePage onBookConsultation={openBookingModal} />} />
-          <Route path="/industries/professional-services" element={<ProfessionalServicesPage onBookConsultation={openBookingModal} />} />
-          <Route path="/industries/ecommerce" element={<ECommercePage onBookConsultation={openBookingModal} />} />
 
           {/* Canonical root URLs matching live cpapnl.com structure */}
           <Route path="/accounting-bookkeeping" element={<Navigate to="/services/accounting-bookkeeping" replace />} />

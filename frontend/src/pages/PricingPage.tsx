@@ -874,3 +874,4 @@ export const PricingPage: React.FC<Props> = ({ onBookConsultation }) => {
     </div>
   );
 };
+

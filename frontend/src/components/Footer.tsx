@@ -136,11 +136,11 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* 2. Main 5-Column Grid (Balanced & Evenly Spaced) */}
+        {/* 2. Main 4-Column Grid (Balanced & Evenly Spaced) */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
             gap: '2.5rem',
             marginBottom: '3.5rem',
             alignItems: 'start',
@@ -248,60 +248,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Industries We Serve */}
-          <div>
-            <h4
-              style={{
-                color: '#FFFFFF',
-                fontSize: '12px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.08em',
-                marginBottom: '1.25rem',
-                fontWeight: 700,
-              }}
-            >
-              Industries We Serve
-            </h4>
-            <ul
-              style={{
-                listStyle: 'none',
-                padding: 0,
-                margin: 0,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.85rem',
-                fontSize: '13.5px',
-              }}
-            >
-              <li>
-                <Link to="/industries/small-business" className="footer-link">
-                  Small Business Owners
-                </Link>
-              </li>
-              <li>
-                <Link to="/industries/real-estate" className="footer-link">
-                  Real Estate Investors &amp; PREC
-                </Link>
-              </li>
-              <li>
-                <Link to="/industries/professional-services" className="footer-link">
-                  Professional Services &amp; PC
-                </Link>
-              </li>
-              <li>
-                <Link to="/industries/ecommerce" className="footer-link">
-                  eCommerce &amp; Online Sellers
-                </Link>
-              </li>
-              <li>
-                <Link to="/partners/referral-program" className="footer-link" style={{ color: 'var(--gold-400)' }}>
-                  Professional Referral Program &rarr;
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Resources & Tools */}
+          {/* Column 3: Resources & Tools */}
           <div>
             <h4
               style={{
@@ -334,6 +281,11 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/case-studies" className="footer-link" style={{ fontWeight: 700, color: '#FFFFFF' }}>
                   Client Case Studies &amp; Results &rarr;
+                </Link>
+              </li>
+              <li>
+                <Link to="/partners/referral-program" className="footer-link" style={{ color: 'var(--gold-400)' }}>
+                  Professional Referral Program &rarr;
                 </Link>
               </li>
               <li>
@@ -374,7 +326,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 5: Direct Contact (Clean, spacious, uncrowded) */}
+          {/* Column 4: Direct Contact (Clean, spacious, uncrowded) */}
           <div>
             <h4
               style={{
