@@ -906,9 +906,31 @@ export const Home: React.FC<HomeProps> = ({
             </div>
           </div>
 
-          <p style={{ textAlign: 'center', fontSize: '13.5px', color: 'var(--text-muted)' }}>
+          <p style={{ textAlign: 'center', fontSize: '13.5px', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
             All plans include a complimentary 30-minute discovery call · Pricing in CAD · Tailored quotes for complex engagements
           </p>
+
+          <div style={{ textAlign: 'center' }}>
+            <Link
+              to="/pricing"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                backgroundColor: '#0F294A',
+                color: '#FCAC14',
+                padding: '0.85rem 1.85rem',
+                borderRadius: '6px',
+                fontWeight: 800,
+                fontSize: '14px',
+                textDecoration: 'none',
+                boxShadow: '0 4px 12px rgba(15, 41, 74, 0.2)',
+              }}
+            >
+              <span>Calculate Custom Scope in our Interactive Quote Builder</span>
+              <ArrowRight size={15} />
+            </Link>
+          </div>
         </div>
       </section>
 

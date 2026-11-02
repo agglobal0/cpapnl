@@ -327,6 +327,11 @@ export const Footer: React.FC = () => {
               }}
             >
               <li>
+                <Link to="/pricing" className="footer-link" style={{ color: 'var(--gold-400)', fontWeight: 700 }}>
+                  Pricing &amp; Quote Builder &rarr;
+                </Link>
+              </li>
+              <li>
                 <Link to="/case-studies" className="footer-link" style={{ fontWeight: 700, color: '#FFFFFF' }}>
                   Client Case Studies &amp; Results &rarr;
                 </Link>

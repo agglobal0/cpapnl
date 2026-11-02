@@ -51,6 +51,7 @@ import { ECommercePage } from './pages/industries/ECommerce';
 import { Payroll } from './pages/services/Payroll';
 import { CaseStudiesPage } from './pages/resources/CaseStudiesPage';
 import { ReferralProgramPage } from './pages/partners/ReferralProgramPage';
+import { PricingPage } from './pages/PricingPage';
 
 export const App: React.FC = () => {
   const location = useLocation();
@@ -103,6 +104,8 @@ export const App: React.FC = () => {
           />
           <Route path="/about-us" element={<AboutUs onBookConsultation={openBookingModal} />} />
           <Route path="/about" element={<Navigate to="/about-us" replace />} />
+          <Route path="/pricing" element={<PricingPage onBookConsultation={openBookingModal} />} />
+          <Route path="/quote-builder" element={<PricingPage onBookConsultation={openBookingModal} />} />
 
           {/* Service Landing Pages */}
           <Route path="/services" element={<Navigate to="/services/accounting-bookkeeping" replace />} />
