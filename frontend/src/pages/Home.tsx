@@ -977,6 +977,132 @@ export const Home: React.FC<HomeProps> = ({
         </div>
       </section>
 
+      {/* PHASE 4 — Featured Client Case Studies Spotlight */}
+      <section style={{ backgroundColor: '#0F294A', color: '#FFFFFF', padding: '5.5rem 0', borderTop: '4px solid #FCAC14' }}>
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3.5rem', flexWrap: 'wrap', gap: '1.5rem' }}>
+            <div>
+              <div style={{ fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#FCAC14', marginBottom: '0.5rem' }}>
+                Measurable Financial Outcomes
+              </div>
+              <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: 800, color: '#FFFFFF', margin: 0, letterSpacing: '-0.02em' }}>
+                Proven Results for Canadian Founders
+              </h2>
+            </div>
+            <Link
+              to="/case-studies"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                color: '#FCAC14',
+                fontWeight: 700,
+                fontSize: '14.5px',
+                textDecoration: 'none',
+              }}
+            >
+              <span>View All Detailed Case Studies</span>
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            {[
+              {
+                metric: '$28,400',
+                metricLabel: 'Annual Tax Reduction',
+                badge: 'Holdco & Asset Protection',
+                client: 'Commercial Concrete Contractor',
+                location: 'Brampton, ON',
+                summary: 'Restructured operating company into Holdco with equipment leasing, preserving the 12.2% CCPC tax rate and shielding $450K in heavy machinery from trade liability.',
+              },
+              {
+                metric: '$43,000',
+                metricLabel: 'Year 1 Tax Optimization',
+                badge: 'Medical Professional Corp',
+                client: '3-Physician Family Health Clinic',
+                location: 'Mississauga, ON',
+                summary: 'Incorporated individual MPCs and a joint Management Services Organization, eliminating CRA payroll penalties and establishing passive wealth Holdcos.',
+              },
+              {
+                metric: '$16,800',
+                metricLabel: 'Recovered CRA Cash Refund',
+                badge: 'Multi-Province HST Audit',
+                client: 'Omnichannel eCommerce Brand',
+                location: 'GTA Nationwide',
+                summary: 'Audited 24 months of Shopify and Amazon transactions, recovering $16,800 in unremitted Input Tax Credits and automating daily cloud reconciliations.',
+              },
+            ].map((cs, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  borderRadius: '10px',
+                  padding: '2.25rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.25rem' }}>
+                    <span
+                      style={{
+                        backgroundColor: 'rgba(252, 172, 20, 0.15)',
+                        border: '1px solid rgba(252, 172, 20, 0.3)',
+                        color: '#FCAC14',
+                        padding: '0.25rem 0.65rem',
+                        borderRadius: '4px',
+                        fontSize: '11px',
+                        fontWeight: 800,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.04em',
+                      }}
+                    >
+                      {cs.badge}
+                    </span>
+                    <div style={{ textAlign: 'right' }}>
+                      <div style={{ fontSize: '1.85rem', fontWeight: 900, color: '#FCAC14', lineHeight: 1 }}>{cs.metric}</div>
+                      <div style={{ fontSize: '10.5px', color: 'rgba(255,255,255,0.65)', fontWeight: 600 }}>{cs.metricLabel}</div>
+                    </div>
+                  </div>
+
+                  <h3 style={{ fontSize: '17px', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.35rem' }}>
+                    {cs.client}
+                  </h3>
+                  <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '1rem' }}>
+                    {cs.location}
+                  </div>
+
+                  <p style={{ fontSize: '13.5px', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.6, margin: 0 }}>
+                    {cs.summary}
+                  </p>
+                </div>
+
+                <div style={{ marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <Link
+                    to="/case-studies"
+                    style={{
+                      color: '#FCAC14',
+                      fontSize: '13px',
+                      fontWeight: 700,
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                    }}
+                  >
+                    <span>Read Full Case Study</span>
+                    <ChevronRight size={15} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 5. Business Growth Advisory Banner */}
       <section 
         style={{ 

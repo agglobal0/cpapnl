@@ -605,12 +605,33 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                         textTransform: 'uppercase',
                         textDecoration: 'none',
                         display: 'block',
-                        transition: 'background-color 0.15s ease'
+                        transition: 'background-color 0.15s ease',
+                        borderBottom: '1px solid rgba(255, 255, 255, 0.18)'
                       }}
                       onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
                       onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                     >
                       QUICKBOOKS RESOURCES
+                    </Link>
+
+                    <Link
+                      to="/partners/referral-program"
+                      onClick={() => setPartnersOpen(false)}
+                      style={{
+                        padding: '0.85rem 1.25rem',
+                        color: '#FFFFFF',
+                        fontSize: '13px',
+                        fontWeight: 700,
+                        letterSpacing: '0.04em',
+                        textTransform: 'uppercase',
+                        textDecoration: 'none',
+                        display: 'block',
+                        transition: 'background-color 0.15s ease'
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
+                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+                    >
+                      REFERRAL PARTNERS
                     </Link>
                   </div>
                 </div>
@@ -951,12 +972,32 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                         textTransform: 'uppercase',
                         textDecoration: 'none',
                         display: 'block',
-                        transition: 'background-color 0.15s ease'
+                        transition: 'background-color 0.15s ease',
+                        borderBottom: '1px solid rgba(255, 255, 255, 0.18)'
                       }}
                       onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
                       onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                     >
                       TAX DEADLINE CALENDAR
+                    </Link>
+                    <Link
+                      to="/case-studies"
+                      onClick={() => setResourcesOpen(false)}
+                      style={{
+                        padding: '0.85rem 1.25rem',
+                        color: '#FFFFFF',
+                        fontSize: '13px',
+                        fontWeight: 700,
+                        letterSpacing: '0.04em',
+                        textTransform: 'uppercase',
+                        textDecoration: 'none',
+                        display: 'block',
+                        transition: 'background-color 0.15s ease'
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
+                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+                    >
+                      CLIENT CASE STUDIES
                     </Link>
                   </div>
                 </div>
@@ -1063,12 +1104,14 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/xero-resources" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>XERO RESOURCES</Link>
               <Link to="/quickbooks-online" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>QUICKBOOKS ONLINE</Link>
               <Link to="/quickbooks-resources" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>QUICKBOOKS RESOURCES</Link>
+              <Link to="/partners/referral-program" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>REFERRAL PARTNERS</Link>
             </div>
 
             <div style={{ borderLeft: '3px solid #FCAC14', paddingLeft: '1rem', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
               <div style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 700, letterSpacing: '0.05em' }}>Resources</div>
               <Link to="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BLOG</Link>
               <Link to="/business-guides" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BUSINESS GUIDES</Link>
+              <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CLIENT CASE STUDIES</Link>
               <Link to="/resources/business-plan-diagnostic" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BUSINESS PLAN DIAGNOSTIC</Link>
               <Link to="/resources" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>FREE CHECKLIST &amp; TEMPLATE DOWNLOADS</Link>
               <Link to="/calculators" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CALCULATORS</Link>

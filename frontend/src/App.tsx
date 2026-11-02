@@ -47,8 +47,10 @@ import { SmallBusinessPage } from './pages/industries/SmallBusiness';
 import { RealEstatePage } from './pages/industries/RealEstate';
 import { ProfessionalServicesPage } from './pages/industries/ProfessionalServices';
 import { ECommercePage } from './pages/industries/ECommerce';
-// Additional Services
+// Additional Services & Case Studies
 import { Payroll } from './pages/services/Payroll';
+import { CaseStudiesPage } from './pages/resources/CaseStudiesPage';
+import { ReferralProgramPage } from './pages/partners/ReferralProgramPage';
 
 export const App: React.FC = () => {
   const location = useLocation();
@@ -124,6 +126,8 @@ export const App: React.FC = () => {
 
           {/* Partners & Cloud Technology Dropdown Pages */}
           <Route path="/partners" element={<Partners onBookConsultation={openBookingModal} />} />
+          <Route path="/partners/referral-program" element={<ReferralProgramPage onBookConsultation={openBookingModal} />} />
+          <Route path="/referrals" element={<ReferralProgramPage onBookConsultation={openBookingModal} />} />
           <Route path="/cloud-accounting" element={<CloudAccounting onBookConsultation={openBookingModal} />} />
           <Route path="/xero" element={<AboutXero />} />
           <Route path="/xero-resources" element={<XeroResources />} />
@@ -140,6 +144,8 @@ export const App: React.FC = () => {
           <Route path="/resources/calculators" element={<CalculatorsPage onBookConsultation={openBookingModal} />} />
           <Route path="/resources/tax-deadlines" element={<TaxDeadlinesPage />} />
           <Route path="/tax-deadlines" element={<TaxDeadlinesPage />} />
+          <Route path="/resources/case-studies" element={<CaseStudiesPage onBookConsultation={openBookingModal} />} />
+          <Route path="/case-studies" element={<CaseStudiesPage onBookConsultation={openBookingModal} />} />
           <Route path="/resources/7-steps-to-growing-your-business" element={<SevenStepsPage onBookConsultation={openBookingModal} onOpenLeadModal={openLeadModal} />} />
           <Route path="/resources/glossary" element={<GlossaryPage />} />
           <Route path="/resources/downloads" element={<DownloadsPage onOpenLeadModal={openLeadModal} />} />

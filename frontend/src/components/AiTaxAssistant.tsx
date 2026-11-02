@@ -468,3 +468,4 @@ export const AiTaxAssistant: React.FC<AiTaxAssistantProps> = ({ onBookConsultati
     </div>
   );
 };
+

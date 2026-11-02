@@ -293,6 +293,11 @@ export const Footer: React.FC = () => {
                   eCommerce &amp; Online Sellers
                 </Link>
               </li>
+              <li>
+                <Link to="/partners/referral-program" className="footer-link" style={{ color: 'var(--gold-400)' }}>
+                  Professional Referral Program &rarr;
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -321,6 +326,11 @@ export const Footer: React.FC = () => {
                 fontSize: '13.5px',
               }}
             >
+              <li>
+                <Link to="/case-studies" className="footer-link" style={{ fontWeight: 700, color: '#FFFFFF' }}>
+                  Client Case Studies &amp; Results &rarr;
+                </Link>
+              </li>
               <li>
                 <Link to="/resources/tax-deadlines" className="footer-link">
                   CRA Tax Deadline Calendar
