@@ -15,6 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
   const [partnersOpen, setPartnersOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [clientAreaOpen, setClientAreaOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -32,6 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
     setPartnersOpen(false);
     setResourcesOpen(false);
     setClientAreaOpen(false);
+    setIndustriesOpen(false);
   }, [location.pathname]);
 
   const handlePhoneClick = (phone: string) => {
@@ -401,12 +403,33 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                         textTransform: 'uppercase',
                         textDecoration: 'none',
                         display: 'block',
-                        transition: 'background-color 0.15s ease'
+                        transition: 'background-color 0.15s ease',
+                        borderBottom: '1px solid rgba(255, 255, 255, 0.18)'
                       }}
                       onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
                       onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                     >
                       CONSULTING/TECHNOLOGY
+                    </Link>
+
+                    <Link
+                      to="/services/payroll"
+                      onClick={() => setServicesOpen(false)}
+                      style={{
+                        padding: '0.85rem 1.25rem',
+                        color: '#FFFFFF',
+                        fontSize: '13px',
+                        fontWeight: 700,
+                        letterSpacing: '0.04em',
+                        textTransform: 'uppercase',
+                        textDecoration: 'none',
+                        display: 'block',
+                        transition: 'background-color 0.15s ease'
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
+                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+                    >
+                      PAYROLL SERVICES
                     </Link>
                   </div>
                 </div>
@@ -589,6 +612,110 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                     >
                       QUICKBOOKS RESOURCES
                     </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Industries Dropdown */}
+            <div
+              style={{ position: 'relative', display: 'inline-block' }}
+              onMouseEnter={() => setIndustriesOpen(true)}
+              onMouseLeave={() => setIndustriesOpen(false)}
+            >
+              <button
+                id="industries-nav-btn"
+                onClick={() => setIndustriesOpen((prev) => !prev)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: (isLinkActive('/industries') || industriesOpen) ? '#FCAC14' : '#1E293B',
+                  fontWeight: 700,
+                  fontSize: '13.5px',
+                  letterSpacing: '0.04em',
+                  textTransform: 'uppercase',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.25rem',
+                  cursor: 'pointer',
+                  padding: '0.5rem 0',
+                  whiteSpace: 'nowrap',
+                  lineHeight: 1,
+                  transition: 'color 0.15s ease'
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#FCAC14')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = (isLinkActive('/industries') || industriesOpen) ? '#FCAC14' : '#1E293B')}
+                aria-expanded={industriesOpen}
+                aria-haspopup="true"
+              >
+                <span>Industries</span>
+                <ChevronDown size={14} style={{ transform: industriesOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
+              </button>
+
+              {industriesOpen && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '100%',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    paddingTop: '7px',
+                    zIndex: 9999
+                  }}
+                >
+                  <div
+                    style={{
+                      position: 'relative',
+                      backgroundColor: '#FCAC14',
+                      borderRadius: '3px',
+                      boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2)',
+                      minWidth: '250px',
+                      padding: '0.35rem 0',
+                      display: 'flex',
+                      flexDirection: 'column'
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '-7px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: 0,
+                        height: 0,
+                        borderLeft: '7px solid transparent',
+                        borderRight: '7px solid transparent',
+                        borderBottom: '7px solid #FCAC14'
+                      }}
+                    />
+                    {[
+                      { to: '/industries/small-business', label: 'SMALL BUSINESS' },
+                      { to: '/industries/real-estate', label: 'REAL ESTATE INVESTORS' },
+                      { to: '/industries/professional-services', label: 'PROFESSIONAL SERVICES' },
+                      { to: '/industries/ecommerce', label: 'ECOMMERCE & ONLINE SELLERS' },
+                    ].map((item, idx, arr) => (
+                      <Link
+                        key={item.to}
+                        to={item.to}
+                        onClick={() => setIndustriesOpen(false)}
+                        style={{
+                          padding: '0.85rem 1.25rem',
+                          color: '#FFFFFF',
+                          fontSize: '13px',
+                          fontWeight: 700,
+                          letterSpacing: '0.04em',
+                          textTransform: 'uppercase',
+                          textDecoration: 'none',
+                          display: 'block',
+                          transition: 'background-color 0.15s ease',
+                          borderBottom: idx < arr.length - 1 ? '1px solid rgba(255, 255, 255, 0.18)' : 'none'
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
+                        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               )}
@@ -812,6 +939,25 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                     >
                       BUSINESS AND ACCOUNTING GLOSSARY
                     </Link>
+                    <Link
+                      to="/resources/tax-deadlines"
+                      onClick={() => setResourcesOpen(false)}
+                      style={{
+                        padding: '0.85rem 1.25rem',
+                        color: '#FFFFFF',
+                        fontSize: '13px',
+                        fontWeight: 700,
+                        letterSpacing: '0.04em',
+                        textTransform: 'uppercase',
+                        textDecoration: 'none',
+                        display: 'block',
+                        transition: 'background-color 0.15s ease'
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
+                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+                    >
+                      TAX DEADLINE CALENDAR
+                    </Link>
                   </div>
                 </div>
               )}
@@ -899,6 +1045,15 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/services/accounting-bookkeeping" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>ACCOUNTING/BOOKKEEPING</Link>
               <Link to="/services/taxation" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>TAXATION</Link>
               <Link to="/services/consulting-technology" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CONSULTING/TECHNOLOGY</Link>
+              <Link to="/services/payroll" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>PAYROLL SERVICES</Link>
+            </div>
+
+            <div style={{ borderLeft: '3px solid #FCAC14', paddingLeft: '1rem', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 700, letterSpacing: '0.05em' }}>Industries</div>
+              <Link to="/industries/small-business" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>SMALL BUSINESS</Link>
+              <Link to="/industries/real-estate" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>REAL ESTATE INVESTORS</Link>
+              <Link to="/industries/professional-services" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>PROFESSIONAL SERVICES</Link>
+              <Link to="/industries/ecommerce" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>ECOMMERCE &amp; ONLINE SELLERS</Link>
             </div>
 
             <div style={{ borderLeft: '3px solid #FCAC14', paddingLeft: '1rem', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
@@ -919,6 +1074,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/calculators" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CALCULATORS</Link>
               <Link to="/resources/7-steps-to-growing-your-business" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>7 STEPS TO GROWING YOUR BUSINESS</Link>
               <Link to="/business-and-accounting-glossary" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BUSINESS AND ACCOUNTING GLOSSARY</Link>
+              <Link to="/resources/tax-deadlines" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>TAX DEADLINE CALENDAR</Link>
             </div>
 
             <Link to="/contact" style={{ color: '#D97706', fontWeight: 700, fontSize: '15px' }}>CONTACT</Link>

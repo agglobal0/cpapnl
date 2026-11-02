@@ -421,6 +421,37 @@ export const Home: React.FC<HomeProps> = ({
         </div>
       </section>
 
+      {/* PHASE 1 — Social Proof Numbers Bar */}
+      <section style={{ backgroundColor: '#FCAC14', padding: '1.5rem 0' }}>
+        <div className="container">
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+              gap: '1rem',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+          >
+            {[
+              { value: '25+', label: 'Years of CPA Experience' },
+              { value: '200+', label: 'Businesses Served Across Canada' },
+              { value: '$2M+', label: 'In Client Tax Savings' },
+              { value: '100%', label: 'Direct Partner Access — No Juniors' },
+            ].map((stat, i) => (
+              <div key={i}>
+                <div style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 900, color: '#0F294A', lineHeight: 1 }}>
+                  {stat.value}
+                </div>
+                <div style={{ fontSize: '12.5px', fontWeight: 700, color: '#0F294A', marginTop: '0.3rem', opacity: 0.8 }}>
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 3. Feature Spotlight: Simplify Your Accounting & Bookkeeping */}
       <section 
         style={{ 
@@ -788,6 +819,160 @@ export const Home: React.FC<HomeProps> = ({
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PHASE 1 — Transparent Pricing Tiers */}
+      <section style={{ backgroundColor: '#F8FAFC', borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)', padding: '5.5rem 0' }}>
+        <div className="container">
+          <div style={{ maxWidth: '860px', margin: '0 auto 4rem', textAlign: 'center' }}>
+            <div style={{ fontSize: '12.5px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--gold-600)', marginBottom: '0.6rem' }}>
+              Transparent & Predictable
+            </div>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', color: 'var(--navy-900)', fontWeight: 800, marginBottom: '1rem', letterSpacing: '-0.02em' }}>
+              Simple Monthly Pricing — No Surprises
+            </h2>
+            <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+              Every engagement starts with a free 30-minute discovery call. Custom quotes available for complex or growing businesses.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', maxWidth: '1100px', margin: '0 auto 3rem' }}>
+            {/* Essentials */}
+            <div style={{ backgroundColor: '#FFFFFF', border: '1px solid var(--border-light)', borderRadius: '8px', padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column', boxShadow: 'var(--shadow-card)' }}>
+              <div style={{ fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Essentials</div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.25rem', marginBottom: '0.35rem' }}>
+                <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--navy-900)' }}>$499</span>
+                <span style={{ fontSize: '14px', color: 'var(--text-muted)' }}>/mo</span>
+              </div>
+              <div style={{ fontSize: '12.5px', color: 'var(--text-muted)', marginBottom: '1.75rem' }}>Starting from · Custom quote on consultation</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '13.5px', color: 'var(--navy-900)', flex: 1 }}>
+                {['Monthly cloud bookkeeping (Xero or QBO)', 'Bank & credit card reconciliation', 'Corporate T2 income tax filing', 'GST/HST filing & remittance', 'Year-end financial statements'].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                    <span style={{ color: '#D97706', marginTop: '2px', flexShrink: 0 }}>✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link to="/contact" className="btn btn-secondary" style={{ justifyContent: 'center', fontWeight: 700 }}>
+                Get Started →
+              </Link>
+            </div>
+
+            {/* Growth — Featured */}
+            <div style={{ backgroundColor: '#0F294A', border: '2px solid #FCAC14', borderRadius: '8px', padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column', boxShadow: '0 8px 32px rgba(15, 41, 74, 0.25)', position: 'relative' }}>
+              <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', backgroundColor: '#FCAC14', color: '#0F294A', fontSize: '11px', fontWeight: 900, padding: '0.3rem 1rem', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.06em', whiteSpace: 'nowrap' }}>
+                Most Popular
+              </div>
+              <div style={{ fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'rgba(255,255,255,0.6)', marginBottom: '0.5rem' }}>Growth</div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.25rem', marginBottom: '0.35rem' }}>
+                <span style={{ fontSize: '2.5rem', fontWeight: 900, color: '#FFFFFF' }}>$899</span>
+                <span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.65)' }}>/mo</span>
+              </div>
+              <div style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.6)', marginBottom: '1.75rem' }}>Starting from · Custom quote on consultation</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '13.5px', color: '#FFFFFF', flex: 1 }}>
+                {['Everything in Essentials', 'Proactive year-round tax planning', 'Owner salary vs. dividend optimization', 'Payroll setup & source deductions (PD7A)', '2× annual CPA strategy sessions', 'CRA audit representation & support'].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                    <span style={{ color: '#FCAC14', marginTop: '2px', flexShrink: 0 }}>✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link to="/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', backgroundColor: '#FCAC14', color: '#0F294A', padding: '0.85rem 1.5rem', borderRadius: '4px', fontWeight: 800, fontSize: '14.5px', textDecoration: 'none' }}>
+                Book a Free Call →
+              </Link>
+            </div>
+
+            {/* Advisory CFO */}
+            <div style={{ backgroundColor: '#FFFFFF', border: '1px solid var(--border-light)', borderRadius: '8px', padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column', boxShadow: 'var(--shadow-card)' }}>
+              <div style={{ fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Advisory CFO</div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.25rem', marginBottom: '0.35rem' }}>
+                <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--navy-900)' }}>$1,799</span>
+                <span style={{ fontSize: '14px', color: 'var(--text-muted)' }}>/mo</span>
+              </div>
+              <div style={{ fontSize: '12.5px', color: 'var(--text-muted)', marginBottom: '1.75rem' }}>Starting from · Custom quote on consultation</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem 0', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '13.5px', color: 'var(--navy-900)', flex: 1 }}>
+                {['Everything in Growth', 'Fractional CFO — monthly advisory calls', '13-week rolling cash flow forecasting', 'Board-ready financial reporting', 'M&A due diligence & valuation support', 'Corporate restructuring & Holdco advisory', 'Unlimited CPA partner access'].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                    <span style={{ color: '#D97706', marginTop: '2px', flexShrink: 0 }}>✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link to="/contact" className="btn btn-secondary" style={{ justifyContent: 'center', fontWeight: 700 }}>
+                Discuss My Needs →
+              </Link>
+            </div>
+          </div>
+
+          <p style={{ textAlign: 'center', fontSize: '13.5px', color: 'var(--text-muted)' }}>
+            All plans include a complimentary 30-minute discovery call · Pricing in CAD · Tailored quotes for complex engagements
+          </p>
+        </div>
+      </section>
+
+      {/* PHASE 1 — Social Proof / Google Reviews Highlight */}
+      <section style={{ backgroundColor: '#FFFFFF', borderBottom: '1px solid var(--border-light)', padding: '5rem 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 3.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.35rem', marginBottom: '0.75rem' }}>
+              {[1,2,3,4,5].map(i => (
+                <svg key={i} width="22" height="22" viewBox="0 0 24 24" fill="#FCAC14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+              <span style={{ fontSize: '18px', fontWeight: 900, color: 'var(--navy-900)', marginLeft: '0.35rem' }}>5.0</span>
+              <span style={{ fontSize: '14px', color: 'var(--text-muted)', marginLeft: '0.25rem' }}>on Google</span>
+            </div>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.4rem)', color: 'var(--navy-900)', fontWeight: 800, marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>
+              Trusted by Canadian Business Owners
+            </h2>
+            <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.65 }}>
+              Real results from real clients across the GTA and Canada.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.75rem', marginBottom: '3rem' }}>
+            {[
+              {
+                quote: "Mark and Helen are the real deal. After switching to Puri & Loggia, we uncovered $14,000 in missed HST input tax credits from prior years. They're proactive, responsive, and genuinely invested in our success.",
+                name: 'David K.',
+                role: 'President, Construction Subcontractor',
+                location: 'Brampton, ON'
+              },
+              {
+                quote: "I was intimidated by the CRA audit notice. Mark represented us directly and resolved everything in 6 weeks. Having a CPA partner who picks up the phone makes all the difference.",
+                name: 'Priya S.',
+                role: 'Owner, Medical Clinic',
+                location: 'Mississauga, ON'
+              },
+              {
+                quote: "Finally a CPA firm that actually explains things in plain English. They set up our Xero system, cleaned up 2 years of messy books, and now I get clean financials by the 15th every month.",
+                name: 'James T.',
+                role: 'Founder, eCommerce Brand',
+                location: 'Toronto, ON'
+              }
+            ].map((t, i) => (
+              <div key={i} style={{ backgroundColor: '#F8FAFC', border: '1px solid var(--border-light)', borderRadius: '8px', padding: '2rem', boxShadow: 'var(--shadow-card)' }}>
+                <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '1rem' }}>
+                  {[1,2,3,4,5].map(s => (
+                    <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill="#FCAC14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  ))}
+                </div>
+                <p style={{ fontSize: '14.5px', color: 'var(--navy-900)', lineHeight: 1.7, marginBottom: '1.5rem', fontStyle: 'italic' }}>
+                  "{t.quote}"
+                </p>
+                <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '1rem' }}>
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: 'var(--navy-900)' }}>{t.name}</div>
+                  <div style={{ fontSize: '12.5px', color: 'var(--text-muted)' }}>{t.role} · {t.location}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center' }}>
+            <Link to="/testimonials" className="btn btn-secondary" style={{ fontWeight: 700 }}>
+              Read All Client Stories →
+            </Link>
           </div>
         </div>
       </section>

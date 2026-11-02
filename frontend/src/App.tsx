@@ -6,6 +6,7 @@ import { BookingModal } from './components/BookingModal';
 import { LeadModal } from './components/LeadModal';
 import { StripeModal } from './components/StripeModal';
 import { CookieConsent } from './components/CookieConsent';
+import { AiTaxAssistant } from './components/AiTaxAssistant';
 import { trackPageView } from './services/analytics';
 import { ResourceDownloadItem } from './services/api';
 
@@ -27,6 +28,7 @@ import { DiagnosticPage } from './pages/resources/DiagnosticPage';
 import { CalculatorsPage } from './pages/resources/CalculatorsPage';
 import { SevenStepsPage } from './pages/resources/SevenStepsPage';
 import { GlossaryPage } from './pages/resources/GlossaryPage';
+import { TaxDeadlinesPage } from './pages/resources/TaxDeadlinesPage';
 import { DownloadsPage } from './pages/resources/DownloadsPage';
 import { BlogList } from './pages/resources/BlogList';
 import { BlogPost } from './pages/resources/BlogPost';
@@ -39,6 +41,14 @@ import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { Terms } from './pages/Terms';
 import { NotFound } from './pages/NotFound';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
+
+// Industry Pages
+import { SmallBusinessPage } from './pages/industries/SmallBusiness';
+import { RealEstatePage } from './pages/industries/RealEstate';
+import { ProfessionalServicesPage } from './pages/industries/ProfessionalServices';
+import { ECommercePage } from './pages/industries/ECommerce';
+// Additional Services
+import { Payroll } from './pages/services/Payroll';
 
 export const App: React.FC = () => {
   const location = useLocation();
@@ -98,6 +108,14 @@ export const App: React.FC = () => {
           <Route path="/services/taxation" element={<Taxation onBookConsultation={openBookingModal} />} />
           <Route path="/services/consulting-technology" element={<ConsultingTechnology onBookConsultation={openBookingModal} />} />
           <Route path="/services/cloud-accounting" element={<CloudAccounting onBookConsultation={openBookingModal} />} />
+          <Route path="/services/payroll" element={<Payroll onBookConsultation={openBookingModal} />} />
+          <Route path="/payroll" element={<Payroll onBookConsultation={openBookingModal} />} />
+
+          {/* Industry Vertical Pages */}
+          <Route path="/industries/small-business" element={<SmallBusinessPage onBookConsultation={openBookingModal} />} />
+          <Route path="/industries/real-estate" element={<RealEstatePage onBookConsultation={openBookingModal} />} />
+          <Route path="/industries/professional-services" element={<ProfessionalServicesPage onBookConsultation={openBookingModal} />} />
+          <Route path="/industries/ecommerce" element={<ECommercePage onBookConsultation={openBookingModal} />} />
 
           {/* Canonical root URLs matching live cpapnl.com structure */}
           <Route path="/accounting-bookkeeping" element={<Navigate to="/services/accounting-bookkeeping" replace />} />
@@ -120,6 +138,8 @@ export const App: React.FC = () => {
           <Route path="/resources" element={<ResourcesHub onOpenLeadModal={openLeadModal} />} />
           <Route path="/resources/business-plan-diagnostic" element={<DiagnosticPage onBookConsultation={openBookingModal} />} />
           <Route path="/resources/calculators" element={<CalculatorsPage onBookConsultation={openBookingModal} />} />
+          <Route path="/resources/tax-deadlines" element={<TaxDeadlinesPage />} />
+          <Route path="/tax-deadlines" element={<TaxDeadlinesPage />} />
           <Route path="/resources/7-steps-to-growing-your-business" element={<SevenStepsPage onBookConsultation={openBookingModal} onOpenLeadModal={openLeadModal} />} />
           <Route path="/resources/glossary" element={<GlossaryPage />} />
           <Route path="/resources/downloads" element={<DownloadsPage onOpenLeadModal={openLeadModal} />} />
@@ -170,6 +190,8 @@ export const App: React.FC = () => {
       />
 
       <CookieConsent />
+
+      {!isAdminRoute && <AiTaxAssistant onBookConsultation={openBookingModal} />}
     </div>
   );
 };
