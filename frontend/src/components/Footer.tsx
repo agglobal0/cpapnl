@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, ExternalLink, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, ExternalLink, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { Logo } from '../assets/brand/Logo';
 import { api } from '../services/api';
 import { trackEvent } from '../services/analytics';
@@ -230,21 +230,6 @@ export const Footer: React.FC = () => {
                   Cloud Accounting Systems (Xero / QBO)
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/onboarding"
-                  style={{
-                    color: 'var(--gold-400)',
-                    fontWeight: 600,
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.35rem',
-                  }}
-                >
-                  <span>Client Onboarding Portal</span>
-                  <ArrowRight size={13} />
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -273,21 +258,6 @@ export const Footer: React.FC = () => {
                 fontSize: '13.5px',
               }}
             >
-              <li>
-                <Link to="/pricing" className="footer-link" style={{ color: 'var(--gold-400)', fontWeight: 700 }}>
-                  Pricing &amp; Quote Builder &rarr;
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="footer-link" style={{ fontWeight: 700, color: '#FFFFFF' }}>
-                  Client Case Studies &amp; Results &rarr;
-                </Link>
-              </li>
-              <li>
-                <Link to="/partners/referral-program" className="footer-link" style={{ color: 'var(--gold-400)' }}>
-                  Professional Referral Program &rarr;
-                </Link>
-              </li>
               <li>
                 <Link to="/resources/calculators" className="footer-link">
                   Financial &amp; Tax Calculators
