@@ -601,16 +601,6 @@ export const VERIFIED_DOWNLOADS: ResourceDownloadItem[] = [
     description: 'A structured blueprint covering pricing power, customer acquisition economics, gross margin optimization, and cloud workflow automation.',
     isGated: false,
     downloadUrl: '/assets/downloads/sample-7-steps-workbook.pdf'
-  },
-  {
-    id: 'cloud-tech-stack-blueprint',
-    title: 'Modern Canadian Cloud Accounting Tech Stack Architecture',
-    category: 'Cloud Technology',
-    format: 'Architecture PDF',
-    pagesOrSize: '6 Pages',
-    description: 'A diagrammed guide to connecting Xero/QBO with Stripe, Wagepoint, Hubdoc, and Shopify for zero-touch financial management.',
-    isGated: false,
-    downloadUrl: '/assets/downloads/sample-cloud-stack.pdf'
   }
 ];
 

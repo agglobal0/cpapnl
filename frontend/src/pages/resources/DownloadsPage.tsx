@@ -13,7 +13,7 @@ export const DownloadsPage: React.FC<{ onOpenLeadModal: (res: any) => void }> = 
           </div>
           <h1>Checklists, Templates &amp; Downloads</h1>
           <p>
-            Download the battle-tested financial models, year-end tax preparation checklists, and cloud architecture blueprints used by Puri &amp; Loggia LLP.
+            Download the battle-tested financial models, year-end tax preparation checklists, and business growth workbooks used by Puri &amp; Loggia LLP.
           </p>
         </div>
       </div>
