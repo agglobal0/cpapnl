@@ -358,114 +358,6 @@ export const VERIFIED_TESTIMONIALS: TestimonialItem[] = [
 
 export const DEFAULT_BLOG_POSTS: BlogPostItem[] = [
   {
-    id: 5,
-    slug: 'stay-alert-from-cra-scams',
-    title: 'Stay alert from CRA scams',
-    excerpt: 'How to recognize fraudulent text messages, fake refund portals, and aggressive robocalls impersonating the Canada Revenue Agency.',
-    content: `
-# Stay alert from CRA scams
-
-Whether you’re filing your corporate taxes, expecting an HST refund, or updating business records, fraudsters are actively attempting to intercept your data and money by posing as Canada Revenue Agency (CRA) agents. 
-
-With cybercrime becoming more targeted and sophisticated, understanding what these scams look like is critical to protecting your business, cash accounts, and employees.
-
-## The Most Common CRA Scam Tactics
-
-Fraudsters have developed convincing ways to mimic authentic CRA communications:
-1. **Fake Refund Links via Text (SMS)**: Messages claiming you have an uncollected tax refund or GST credit, asking you to click an e-transfer link and enter your online banking credentials.
-2. **Urgent Audit Robocalls**: Aggressive pre-recorded calls asserting that you or your corporation owe thousands in back taxes, threatening immediate RCMP arrest or asset seizure if not paid immediately.
-3. **Phishing Portals**: High-fidelity clones of CRA My Account or My Business Account designed to capture User IDs, passwords, and security question answers.
-4. **Demands for Non-Standard Payment**: Requests for payment via cryptocurrency (Bitcoin ATMs), prepaid gift cards, or wire transfers to personal accounts.
-
-## What the CRA Will NEVER Do
-
-To protect yourself, keep these verified CRA operating rules in mind:
-- **The CRA will NEVER** send an email or text with a link asking you to disclose personal or financial information.
-- **The CRA will NEVER** demand immediate payment using prepaid cards, gift cards, or crypto.
-- **The CRA will NEVER** threaten you or your business with immediate arrest or police detention over the phone.
-- **The CRA will NEVER** leave a voicemail that reveals personal tax details without identity verification.
-
-## How Puri & Loggia Protects Your Business
-
-As your registered CPA representative with the CRA, all formal notices of assessment, review inquiries, and correspondence can be routed directly through our secure partner portal. If you receive any suspicious notice, do not reply or click links—forward it directly to our partners at **support@cpapnl.com** or call us at **416-805-1427**.
-    `,
-    category: 'Tax Compliance',
-    readTime: '4 min read',
-    publishedAt: '2025-08-21',
-    status: 'published',
-    author: 'Helen Loggia, CPA, MBA'
-  },
-  {
-    id: 6,
-    slug: '8-things-your-invoice-needs-in-order-to-get-paid-faster',
-    title: '8 things your invoice needs in order to get paid faster',
-    excerpt: 'Proven invoice architecture to eliminate billing friction, ensure GST/HST compliance, and speed up client collections by up to 14 days.',
-    content: `
-# 8 things your invoice needs in order to get paid faster
-
-Cash flow is the lifeblood of every growing enterprise. Yet many Canadian businesses experience unnecessary payment delays simply because their invoices lack clear details, proper tax numbers, or convenient payment methods.
-
-Here are the 8 essential elements your invoices must have to minimize friction and get settled faster:
-
-### 1. Distinct Invoice Number & Clean Header
-Every invoice must have a sequential, unique invoice number. Pair this with your official corporation name, registered business address, and clear corporate logo.
-
-### 2. Registered 9-Digit GST/HST Number
-If your business is registered for GST/HST, Canadian tax law requires you to display your 9-digit Business Number (e.g., 123456789 RT0001). Omitting this number often causes corporate clients' finance departments to withhold payment until verified.
-
-### 3. Clear Itemization & Scope of Work
-Avoid vague entries like "Consulting services." Break down work into milestone deliverables, hours, or units with agreed-upon rates so client managers can approve payment instantly without questioning.
-
-### 4. Explicit Due Date (Not Just "Due Upon Receipt")
-"Due Upon Receipt" is vague and often gets pushed to the bottom of accounts payable queues. Use a firm calendar date (e.g., *Due on November 15, 2026* or *Net 15 Days*).
-
-### 5. Multi-Option Electronic Payment Links
-Incorporate direct "Pay Now" links through your cloud accounting software (Xero or QuickBooks Online) enabling credit card, pre-authorized debit (PAD), or direct EFT transfer.
-
-### 6. Accurate Client Contact Person
-Always address invoices directly to the specific project manager or accounts payable lead who approved the work—not just an anonymous info@ address.
-
-### 7. Late Payment Terms & Interest Policy
-Explicitly state payment terms, including any standard interest penalty on overdue accounts (e.g., 1.5% per month on accounts past 30 days).
-
-### 8. Direct Contact Details for Billing Inquiries
-Include a direct email and telephone extension for your accounts receivable team so discrepancies can be resolved in minutes rather than weeks.
-    `,
-    category: 'Cloud Accounting',
-    readTime: '5 min read',
-    publishedAt: '2025-07-18',
-    status: 'published',
-    author: 'Helen Loggia, CPA, MBA'
-  },
-  {
-    id: 4,
-    slug: 'protecting-your-business-online',
-    title: 'Protecting your business online',
-    excerpt: 'Essential security practices for entrepreneurs: safeguarding cloud financial data, Xero and QuickBooks credentials, and client payment systems.',
-    content: `
-# Protecting your business online
-
-As businesses increasingly move their accounting, client records, and banking operations to the cloud, protecting your digital assets has never been more critical. 
-
-Cybersecurity is not just an IT concern—it is a core financial and fiduciary responsibility. A single compromised password or phishing email can compromise sensitive payroll information, tax documents, or banking access.
-
-### Key Strategies for Small Business Data Protection:
-
-1. **Multi-Factor Authentication (MFA)**: Ensure MFA is strictly enforced across all financial platforms, including your cloud GL (Xero / QuickBooks Online), email providers, and bank accounts.
-2. **Access Control & Role Separation**: Never share master login credentials. Provide team members with scoped permissions matching their specific responsibilities.
-3. **Phishing Awareness**: Regularly train staff to identify suspicious emails requesting urgent wire transfers, password resets, or tax slip attachments.
-4. **Encrypted Document Portals**: Avoid sending sensitive CRA documents or employee SINs via regular unencrypted email. Utilize secure client portals with end-to-end encryption.
-5. **Regular Backup & Activity Audits**: Maintain automated off-site backups and periodically review system access logs for anomalous activity.
-
-*At Puri & Loggia LLP, we help businesses implement secure, compliant cloud systems that streamline operations while maintaining the highest privacy standards.*
-    `,
-    category: 'Business Security',
-    readTime: '5 min read',
-    publishedAt: '2025-08-26',
-    status: 'published',
-    author: 'Mark Puri, CPA, MBA'
-  },
-  {
     id: 1,
     slug: 'salary-vs-dividends-canada-owner-operators',
     title: 'Salary vs. Dividends in Canada: The Definitive Tax Optimization Strategy',
@@ -568,6 +460,86 @@ Many established Canadian companies remain trapped on legacy desktop software ou
     publishedAt: '2026-07-14',
     status: 'published',
     author: 'Mark Puri, CPA, MBA'
+  },
+  {
+    id: 5,
+    slug: 'stay-alert-from-cra-scams',
+    title: 'Stay alert from CRA scams',
+    excerpt: 'How to recognize fraudulent text messages, fake refund portals, and aggressive robocalls impersonating the Canada Revenue Agency.',
+    content: `
+# Stay alert from CRA scams
+
+Whether you’re filing your corporate taxes, expecting an HST refund, or updating business records, fraudsters are actively attempting to intercept your data and money by posing as Canada Revenue Agency (CRA) agents. 
+
+With cybercrime becoming more targeted and sophisticated, understanding what these scams look like is critical to protecting your business, cash accounts, and employees.
+
+## The Most Common CRA Scam Tactics
+
+Fraudsters have developed convincing ways to mimic authentic CRA communications:
+1. **Fake Refund Links via Text (SMS)**: Messages claiming you have an uncollected tax refund or GST credit, asking you to click an e-transfer link and enter your online banking credentials.
+2. **Urgent Audit Robocalls**: Aggressive pre-recorded calls asserting that you or your corporation owe thousands in back taxes, threatening immediate RCMP arrest or asset seizure if not paid immediately.
+3. **Phishing Portals**: High-fidelity clones of CRA My Account or My Business Account designed to capture User IDs, passwords, and security question answers.
+4. **Demands for Non-Standard Payment**: Requests for payment via cryptocurrency (Bitcoin ATMs), prepaid gift cards, or wire transfers to personal accounts.
+
+## What the CRA Will NEVER Do
+
+To protect yourself, keep these verified CRA operating rules in mind:
+- **The CRA will NEVER** send an email or text with a link asking you to disclose personal or financial information.
+- **The CRA will NEVER** demand immediate payment using prepaid cards, gift cards, or crypto.
+- **The CRA will NEVER** threaten you or your business with immediate arrest or police detention over the phone.
+- **The CRA will NEVER** leave a voicemail that reveals personal tax details without identity verification.
+
+## How Puri & Loggia Protects Your Business
+
+As your registered CPA representative with the CRA, all formal notices of assessment, review inquiries, and correspondence can be routed directly through our secure partner portal. If you receive any suspicious notice, do not reply or click links—forward it directly to our partners at **support@cpapnl.com** or call us at **416-805-1427**.
+    `,
+    category: 'Tax Compliance',
+    readTime: '4 min read',
+    publishedAt: '2025-08-21',
+    status: 'published',
+    author: 'Helen Loggia, CPA, MBA'
+  },
+  {
+    id: 6,
+    slug: '8-things-your-invoice-needs-in-order-to-get-paid-faster',
+    title: '8 things your invoice needs in order to get paid faster',
+    excerpt: 'Proven invoice architecture to eliminate billing friction, ensure GST/HST compliance, and speed up client collections by up to 14 days.',
+    content: `
+# 8 things your invoice needs in order to get paid faster
+
+Cash flow is the lifeblood of every growing enterprise. Yet many Canadian businesses experience unnecessary payment delays simply because their invoices lack clear details, proper tax numbers, or convenient payment methods.
+
+Here are the 8 essential elements your invoices must have to minimize friction and get settled faster:
+
+### 1. Distinct Invoice Number & Clean Header
+Every invoice must have a sequential, unique invoice number. Pair this with your official corporation name, registered business address, and clear corporate logo.
+
+### 2. Registered 9-Digit GST/HST Number
+If your business is registered for GST/HST, Canadian tax law requires you to display your 9-digit Business Number (e.g., 123456789 RT0001). Omitting this number often causes corporate clients' finance departments to withhold payment until verified.
+
+### 3. Clear Itemization & Scope of Work
+Avoid vague entries like "Consulting services." Break down work into milestone deliverables, hours, or units with agreed-upon rates so client managers can approve payment instantly without questioning.
+
+### 4. Explicit Due Date (Not Just "Due Upon Receipt")
+"Due Upon Receipt" is vague and often gets pushed to the bottom of accounts payable queues. Use a firm calendar date (e.g., *Due on November 15, 2026* or *Net 15 Days*).
+
+### 5. Multi-Option Electronic Payment Links
+Incorporate direct "Pay Now" links through your cloud accounting software (Xero or QuickBooks Online) enabling credit card, pre-authorized debit (PAD), or direct EFT transfer.
+
+### 6. Accurate Client Contact Person
+Always address invoices directly to the specific project manager or accounts payable lead who approved the work—not just an anonymous info@ address.
+
+### 7. Late Payment Terms & Interest Policy
+Explicitly state payment terms, including any standard interest penalty on overdue accounts (e.g., 1.5% per month on accounts past 30 days).
+
+### 8. Direct Contact Details for Billing Inquiries
+Include a direct email and telephone extension for your accounts receivable team so discrepancies can be resolved in minutes rather than weeks.
+    `,
+    category: 'Cloud Accounting',
+    readTime: '5 min read',
+    publishedAt: '2025-07-18',
+    status: 'published',
+    author: 'Helen Loggia, CPA, MBA'
   }
 ];
 

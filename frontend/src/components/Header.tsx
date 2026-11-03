@@ -796,6 +796,28 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               )}
             </div>
 
+            {/* Blog Link */}
+            <Link 
+              to="/blog" 
+              style={{ 
+                color: (isLinkActive('/blog') || isLinkActive('/resources/blog')) ? '#FCAC14' : '#1E293B', 
+                fontWeight: 700, 
+                fontSize: '13.5px',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap',
+                display: 'inline-flex',
+                alignItems: 'center',
+                lineHeight: 1,
+                padding: '0.5rem 0',
+                transition: 'color 0.15s ease'
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#FCAC14')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = (isLinkActive('/blog') || isLinkActive('/resources/blog')) ? '#FCAC14' : '#1E293B')}
+            >
+              Blog
+            </Link>
+
             {/* Pricing Link */}
             <Link 
               to="/pricing" 
@@ -921,6 +943,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/resources/7-steps-to-growing-your-business" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>7 STEPS TO GROWING YOUR BUSINESS</Link>
             </div>
 
+            <Link to="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: (isLinkActive('/blog') || isLinkActive('/resources/blog')) ? '#D97706' : 'var(--navy-900)', fontWeight: 700, fontSize: '15px' }}>BLOG</Link>
             <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} style={{ color: isLinkActive('/pricing') ? '#D97706' : 'var(--navy-900)', fontWeight: 700, fontSize: '15px' }}>PRICING</Link>
             <Link to="/contact" style={{ color: '#D97706', fontWeight: 700, fontSize: '15px' }}>CONTACT</Link>
             <Link to="/client-area" style={{ color: 'var(--navy-800)', fontWeight: 700, fontSize: '15px' }}>CLIENT AREA (XERO &amp; QBO)</Link>

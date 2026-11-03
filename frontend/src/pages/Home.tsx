@@ -1221,7 +1221,7 @@ export const Home: React.FC<HomeProps> = ({
             </Link>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             {DEFAULT_BLOG_POSTS.slice(0, 3).map((post) => (
               <article 
                 key={post.id}
@@ -1229,53 +1229,46 @@ export const Home: React.FC<HomeProps> = ({
                   backgroundColor: '#FFFFFF',
                   borderRadius: '8px',
                   border: '1px solid var(--border-light)',
-                  overflow: 'hidden',
+                  borderTop: '4px solid #FCAC14',
+                  padding: '2rem',
                   display: 'flex',
                   flexDirection: 'column',
+                  justifyContent: 'space-between',
                   boxShadow: 'var(--shadow-sm)'
                 }}
               >
-                {/* Blog Image */}
-                <div style={{ height: '200px', backgroundColor: 'var(--navy-900)', position: 'relative', overflow: 'hidden' }}>
-                  <img 
-                    src={post.id === 4 ? '/images/blog_cybersecurity.jpg' : '/images/executive_desk_banner.jpg'}
-                    alt={post.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                  <div style={{ position: 'absolute', top: '1rem', left: '1rem', backgroundColor: '#FCAC14', color: '#0F294A', padding: '0.25rem 0.65rem', borderRadius: '4px', fontSize: '11px', fontWeight: 800 }}>
-                    {post.category}
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                    <span className="badge badge-gold" style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      {post.category}
+                    </span>
+                    <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 600 }}>
+                      {post.readTime}
+                    </span>
                   </div>
+
+                  <h3 style={{ fontSize: '19px', fontWeight: 800, color: 'var(--navy-900)', marginBottom: '0.75rem', lineHeight: 1.35 }}>
+                    <Link to={`/resources/blog/${post.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                      {post.title}
+                    </Link>
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0, marginBottom: '1.5rem' }}>
+                    {post.excerpt}
+                  </p>
                 </div>
 
-                <div style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'space-between' }}>
-                  <div>
-                    <div style={{ fontSize: '12.5px', color: 'var(--text-muted)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                      <Calendar size={13} />
-                      <span>{post.publishedAt}</span>
-                      <span>&bull;</span>
-                      <span>{post.readTime}</span>
-                    </div>
-
-                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--navy-900)', marginBottom: '0.75rem', lineHeight: 1.4 }}>
-                      <Link to={`/resources/blog/${post.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
-                        {post.title}
-                      </Link>
-                    </h3>
-
-                    <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
-                      {post.excerpt}
-                    </p>
+                <div style={{ paddingTop: '1.25rem', borderTop: '1px solid var(--border-light)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 600 }}>
+                    {post.author}
                   </div>
-
-                  <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--border-light)' }}>
-                    <Link 
-                      to={`/resources/blog/${post.slug}`}
-                      style={{ fontSize: '13.5px', fontWeight: 700, color: 'var(--navy-800)', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
-                    >
-                      <span>Read Full Article</span>
-                      <ChevronRight size={16} />
-                    </Link>
-                  </div>
+                  <Link 
+                    to={`/resources/blog/${post.slug}`}
+                    style={{ fontSize: '13.5px', fontWeight: 700, color: '#D97706', display: 'inline-flex', alignItems: 'center', gap: '0.35rem', textDecoration: 'none' }}
+                  >
+                    <span>Read Article</span>
+                    <ChevronRight size={16} />
+                  </Link>
                 </div>
               </article>
             ))}
