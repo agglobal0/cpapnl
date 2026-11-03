@@ -24,7 +24,6 @@ import { QuickBooksOnline } from './pages/partners/QuickBooksOnline';
 import { QuickBooksResources } from './pages/partners/QuickBooksResources';
 import { ResourcesHub } from './pages/ResourcesHub';
 import { BusinessGuidesPage } from './pages/resources/BusinessGuidesPage';
-import { DiagnosticPage } from './pages/resources/DiagnosticPage';
 import { CalculatorsPage } from './pages/resources/CalculatorsPage';
 import { SevenStepsPage } from './pages/resources/SevenStepsPage';
 import { GlossaryPage } from './pages/resources/GlossaryPage';
@@ -132,7 +131,7 @@ export const App: React.FC = () => {
           <Route path="/calculators" element={<CalculatorsPage onBookConsultation={openBookingModal} />} />
           <Route path="/business-and-accounting-glossary" element={<GlossaryPage />} />
           <Route path="/resources" element={<ResourcesHub onOpenLeadModal={openLeadModal} />} />
-          <Route path="/resources/business-plan-diagnostic" element={<DiagnosticPage onBookConsultation={openBookingModal} />} />
+          <Route path="/resources/business-plan-diagnostic" element={<Navigate to="/resources" replace />} />
           <Route path="/resources/calculators" element={<CalculatorsPage onBookConsultation={openBookingModal} />} />
           <Route path="/resources/tax-deadlines" element={<TaxDeadlinesPage />} />
           <Route path="/tax-deadlines" element={<TaxDeadlinesPage />} />

@@ -31,7 +31,7 @@ export const AdminDashboard: React.FC = () => {
   const [leads, setLeads] = useState<any[]>([
     { id: 1, name: 'Jason Vance', email: 'jason@vancetech.ca', company: 'Vance Precision Tech', service: 'Accounting & Bookkeeping', source: 'Contact Form', date: '2026-10-20' },
     { id: 2, name: 'Emily Clark', email: 'emily@clarklogistics.ca', company: 'Clark Logistics Ltd.', service: '13-Week Cash Flow Model', source: 'Resource Download', date: '2026-10-18' },
-    { id: 3, name: 'Tariq Al-Mansoor', email: 'tariq@apollosoftware.io', company: 'Apollo Software Inc.', service: 'Corporate Tax (SR&ED)', source: 'Business Plan Diagnostic', date: '2026-10-15' },
+    { id: 3, name: 'Tariq Al-Mansoor', email: 'tariq@apollosoftware.io', company: 'Apollo Software Inc.', service: 'Corporate Tax (SR&ED)', source: 'Interactive Quote Builder', date: '2026-10-15' },
     { id: 4, name: 'Karen MacIntyre', email: 'karen@macintyrelaw.ca', company: 'MacIntyre Legal PC', service: 'Fractional CFO', source: 'Contact Form', date: '2026-10-12' },
   ]);
 

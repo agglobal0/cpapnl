@@ -752,27 +752,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                     </Link>
 
                     <Link
-                      to="/resources/business-plan-diagnostic"
-                      onClick={() => setResourcesOpen(false)}
-                      style={{
-                        padding: '0.85rem 1.25rem',
-                        color: '#FFFFFF',
-                        fontSize: '13px',
-                        fontWeight: 700,
-                        letterSpacing: '0.04em',
-                        textTransform: 'uppercase',
-                        textDecoration: 'none',
-                        display: 'block',
-                        transition: 'background-color 0.15s ease',
-                        borderBottom: '1px solid rgba(255, 255, 255, 0.18)'
-                      }}
-                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
-                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
-                    >
-                      BUSINESS PLAN DIAGNOSTIC
-                    </Link>
-
-                    <Link
                       to="/resources"
                       onClick={() => setResourcesOpen(false)}
                       style={{
@@ -1020,7 +999,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BLOG</Link>
               <Link to="/business-guides" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BUSINESS GUIDES</Link>
               <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CLIENT CASE STUDIES</Link>
-              <Link to="/resources/business-plan-diagnostic" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BUSINESS PLAN DIAGNOSTIC</Link>
               <Link to="/resources" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>FREE CHECKLIST &amp; TEMPLATE DOWNLOADS</Link>
               <Link to="/calculators" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CALCULATORS</Link>
               <Link to="/resources/7-steps-to-growing-your-business" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>7 STEPS TO GROWING YOUR BUSINESS</Link>

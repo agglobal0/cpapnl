@@ -21,13 +21,13 @@ export const Terms: React.FC = () => {
       <section className="section" style={{ backgroundColor: 'var(--surface-base)' }}>
         <div className="container" style={{ maxWidth: '820px', lineHeight: 1.8, fontSize: 'var(--text-base)', color: 'var(--text-primary)' }}>
           <h2 style={{ fontSize: 'var(--text-2xl)', color: 'var(--navy-950)', marginBottom: '1rem' }}>
-            1. Nature of Website Content &amp; Diagnostic Tools
+            1. Nature of Website Content &amp; Financial Calculators
           </h2>
           <p>
-            The information, calculators, checklists, business plan diagnostic scores, and blog articles published on <strong>https://cpapnl.com</strong> are provided strictly for educational and informational purposes. They do not constitute formal professional accounting, legal, or tax advice.
+            The information, calculators, checklists, templates, and blog articles published on <strong>https://cpapnl.com</strong> are provided strictly for educational and informational purposes. They do not constitute formal professional accounting, legal, or tax advice.
           </p>
           <p>
-            No formal CPA-client fiduciary relationship is established merely by accessing this website, submitting an inquiry, downloading a resource, or completing an online diagnostic assessment. A binding professional engagement is established solely upon the mutual execution of an official Puri &amp; Loggia LLP Engagement Letter.
+            No formal CPA-client fiduciary relationship is established merely by accessing this website, submitting an inquiry, downloading a resource, or utilizing an online calculator. A binding professional engagement is established solely upon the mutual execution of an official Puri &amp; Loggia LLP Engagement Letter.
           </p>
 
           <h2 style={{ fontSize: 'var(--text-2xl)', color: 'var(--navy-950)', marginTop: '2.5rem', marginBottom: '1rem' }}>

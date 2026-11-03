@@ -25,7 +25,7 @@ export const ResourcesHub: React.FC<{ onOpenLeadModal: (res: any) => void }> = (
           </div>
           <h1>Canadian Accounting &amp; Business Resources</h1>
           <p>
-            Interactive financial calculators, CRA tax checklists, dynamic cash flow models, business plan diagnostics, and strategic business guides.
+            Interactive financial calculators, CRA tax checklists, dynamic cash flow models, and strategic business guides.
           </p>
 
           {/* Quick Search */}
@@ -47,19 +47,19 @@ export const ResourcesHub: React.FC<{ onOpenLeadModal: (res: any) => void }> = (
       <section className="section" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
-            {/* Tool 1: Diagnostic */}
+            {/* Tool 1: Tax Deadline Calendar */}
             <div className="card card-accent-gold" style={{ borderRadius: 'var(--radius-md)', padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}>
               <div>
-                <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>Featured Assessment</span>
+                <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>CRA Compliance</span>
                 <h3 style={{ fontSize: 'var(--text-xl)', marginBottom: '0.75rem', color: 'var(--navy-900)', fontWeight: 700 }}>
-                  Business Plan Diagnostic
+                  CRA Tax Deadline Calendar
                 </h3>
                 <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                  Take our interactive 3-minute diagnostic to evaluate working capital runway, cloud readiness, and corporate tax architecture.
+                  Complete key filing &amp; remittance calendar for Ontario corporations, GST/HST deadlines, payroll source deductions, and T2 schedules.
                 </p>
               </div>
-              <Link to="/resources/business-plan-diagnostic" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>
-                <span>Launch Diagnostic &rarr;</span>
+              <Link to="/resources/tax-deadlines" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>
+                <span>View Tax Calendar &rarr;</span>
               </Link>
             </div>
 

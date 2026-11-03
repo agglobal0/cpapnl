@@ -294,11 +294,6 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/resources/business-plan-diagnostic" className="footer-link">
-                  Business Plan Diagnostic Tool
-                </Link>
-              </li>
-              <li>
                 <Link to="/resources/calculators" className="footer-link">
                   Financial &amp; Tax Calculators
                 </Link>
