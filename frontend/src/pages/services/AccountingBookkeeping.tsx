@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, ArrowRight, ShieldCheck, Phone, Mail, 
-  FileText, Check, Clock, Layers, Sparkles, Building2, BarChart3, RefreshCw
+  FileText, Check, Clock, Layers, Sparkles, Building2, BarChart3
 } from 'lucide-react';
 
 export const AccountingBookkeeping: React.FC<{ onBookConsultation: (context?: string) => void }> = () => {
@@ -201,19 +201,6 @@ export const AccountingBookkeeping: React.FC<{ onBookConsultation: (context?: st
                   </h3>
                   <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                     We prepare clear, comprehensive financial reports&mdash;including balance sheets, income statements, and cash flow statements&mdash;giving you a crystal-clear picture of your true financial position.
-                  </p>
-                </div>
-
-                {/* 4. Bookkeeping Systems */}
-                <div style={{ backgroundColor: '#F8FAFC', padding: '1.75rem', borderRadius: '8px', border: '1px solid var(--border-light)' }}>
-                  <div style={{ width: '42px', height: '42px', borderRadius: '6px', backgroundColor: 'var(--navy-50)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--navy-800)', marginBottom: '1rem' }}>
-                    <RefreshCw size={20} />
-                  </div>
-                  <h3 style={{ fontSize: '17px', color: 'var(--navy-900)', fontWeight: 800, marginBottom: '0.5rem' }}>
-                    Smart Bookkeeping Systems
-                  </h3>
-                  <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
-                    As business development experts, we know the power of smart systems. We implement modern cloud processes that streamline your bookkeeping, invoicing, bill payments, and payroll.
                   </p>
                 </div>
               </div>
