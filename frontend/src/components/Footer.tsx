@@ -289,11 +289,6 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/resources/tax-deadlines" className="footer-link">
-                  CRA Tax Deadline Calendar
-                </Link>
-              </li>
-              <li>
                 <Link to="/resources/calculators" className="footer-link">
                   Financial &amp; Tax Calculators
                 </Link>

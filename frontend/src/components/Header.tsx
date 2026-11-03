@@ -815,26 +815,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                     </Link>
 
                     <Link
-                      to="/resources/tax-deadlines"
-                      onClick={() => setResourcesOpen(false)}
-                      style={{
-                        padding: '0.85rem 1.25rem',
-                        color: '#FFFFFF',
-                        fontSize: '13px',
-                        fontWeight: 700,
-                        letterSpacing: '0.04em',
-                        textTransform: 'uppercase',
-                        textDecoration: 'none',
-                        display: 'block',
-                        transition: 'background-color 0.15s ease',
-                        borderBottom: '1px solid rgba(255, 255, 255, 0.18)'
-                      }}
-                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
-                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
-                    >
-                      TAX DEADLINE CALENDAR
-                    </Link>
-                    <Link
                       to="/case-studies"
                       onClick={() => setResourcesOpen(false)}
                       style={{
@@ -983,7 +963,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/resources" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>FREE CHECKLIST &amp; TEMPLATE DOWNLOADS</Link>
               <Link to="/calculators" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CALCULATORS</Link>
               <Link to="/resources/7-steps-to-growing-your-business" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>7 STEPS TO GROWING YOUR BUSINESS</Link>
-              <Link to="/resources/tax-deadlines" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>TAX DEADLINE CALENDAR</Link>
             </div>
 
             <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} style={{ color: isLinkActive('/pricing') ? '#D97706' : 'var(--navy-900)', fontWeight: 700, fontSize: '15px' }}>PRICING</Link>

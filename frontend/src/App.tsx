@@ -26,7 +26,6 @@ import { ResourcesHub } from './pages/ResourcesHub';
 import { BusinessGuidesPage } from './pages/resources/BusinessGuidesPage';
 import { CalculatorsPage } from './pages/resources/CalculatorsPage';
 import { SevenStepsPage } from './pages/resources/SevenStepsPage';
-import { TaxDeadlinesPage } from './pages/resources/TaxDeadlinesPage';
 import { DownloadsPage } from './pages/resources/DownloadsPage';
 import { BlogList } from './pages/resources/BlogList';
 import { BlogPost } from './pages/resources/BlogPost';
@@ -132,8 +131,8 @@ export const App: React.FC = () => {
           <Route path="/resources" element={<ResourcesHub onOpenLeadModal={openLeadModal} />} />
           <Route path="/resources/business-plan-diagnostic" element={<Navigate to="/resources" replace />} />
           <Route path="/resources/calculators" element={<CalculatorsPage onBookConsultation={openBookingModal} />} />
-          <Route path="/resources/tax-deadlines" element={<TaxDeadlinesPage />} />
-          <Route path="/tax-deadlines" element={<TaxDeadlinesPage />} />
+          <Route path="/resources/tax-deadlines" element={<Navigate to="/resources" replace />} />
+          <Route path="/tax-deadlines" element={<Navigate to="/resources" replace />} />
           <Route path="/resources/case-studies" element={<CaseStudiesPage onBookConsultation={openBookingModal} />} />
           <Route path="/case-studies" element={<CaseStudiesPage onBookConsultation={openBookingModal} />} />
           <Route path="/resources/7-steps-to-growing-your-business" element={<SevenStepsPage onBookConsultation={openBookingModal} onOpenLeadModal={openLeadModal} />} />

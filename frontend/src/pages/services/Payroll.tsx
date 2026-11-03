@@ -161,8 +161,8 @@ export const Payroll: React.FC<Props> = ({ onBookConsultation }) => {
               <button onClick={() => onBookConsultation('Payroll')} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#FCAC14', color: '#0F294A', border: 'none', padding: '0.9rem 2rem', borderRadius: '4px', fontWeight: 800, fontSize: '15px', cursor: 'pointer' }}>
                 <span>Set Up My Payroll Today</span><ArrowRight size={16} />
               </button>
-              <Link to="/resources/tax-deadlines" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#FFFFFF', border: '1px solid rgba(255,255,255,0.35)', padding: '0.9rem 1.75rem', borderRadius: '4px', fontWeight: 700, fontSize: '14.5px', textDecoration: 'none' }}>
-                <span>View CRA Payroll Deadlines →</span>
+              <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#FFFFFF', border: '1px solid rgba(255,255,255,0.35)', padding: '0.9rem 1.75rem', borderRadius: '4px', fontWeight: 700, fontSize: '14.5px', textDecoration: 'none' }}>
+                <span>Contact Payroll Team →</span>
               </Link>
             </div>
           </div>
