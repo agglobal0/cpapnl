@@ -26,7 +26,6 @@ import { ResourcesHub } from './pages/ResourcesHub';
 import { BusinessGuidesPage } from './pages/resources/BusinessGuidesPage';
 import { CalculatorsPage } from './pages/resources/CalculatorsPage';
 import { SevenStepsPage } from './pages/resources/SevenStepsPage';
-import { GlossaryPage } from './pages/resources/GlossaryPage';
 import { TaxDeadlinesPage } from './pages/resources/TaxDeadlinesPage';
 import { DownloadsPage } from './pages/resources/DownloadsPage';
 import { BlogList } from './pages/resources/BlogList';
@@ -129,7 +128,7 @@ export const App: React.FC = () => {
           <Route path="/blog" element={<BlogList />} />
           <Route path="/business-guides" element={<BusinessGuidesPage />} />
           <Route path="/calculators" element={<CalculatorsPage onBookConsultation={openBookingModal} />} />
-          <Route path="/business-and-accounting-glossary" element={<GlossaryPage />} />
+          <Route path="/business-and-accounting-glossary" element={<Navigate to="/resources" replace />} />
           <Route path="/resources" element={<ResourcesHub onOpenLeadModal={openLeadModal} />} />
           <Route path="/resources/business-plan-diagnostic" element={<Navigate to="/resources" replace />} />
           <Route path="/resources/calculators" element={<CalculatorsPage onBookConsultation={openBookingModal} />} />
@@ -138,7 +137,7 @@ export const App: React.FC = () => {
           <Route path="/resources/case-studies" element={<CaseStudiesPage onBookConsultation={openBookingModal} />} />
           <Route path="/case-studies" element={<CaseStudiesPage onBookConsultation={openBookingModal} />} />
           <Route path="/resources/7-steps-to-growing-your-business" element={<SevenStepsPage onBookConsultation={openBookingModal} onOpenLeadModal={openLeadModal} />} />
-          <Route path="/resources/glossary" element={<GlossaryPage />} />
+          <Route path="/resources/glossary" element={<Navigate to="/resources" replace />} />
           <Route path="/resources/downloads" element={<DownloadsPage onOpenLeadModal={openLeadModal} />} />
           <Route path="/resources/blog" element={<BlogList />} />
           <Route path="/resources/blog/:slug" element={<BlogPost onBookConsultation={openBookingModal} />} />

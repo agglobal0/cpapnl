@@ -46,7 +46,7 @@ export const ResourcesHub: React.FC<{ onOpenLeadModal: (res: any) => void }> = (
       {/* 2. Featured Core Tools Grid */}
       <section className="section" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
             {/* Tool 1: Calculators */}
             <div className="card card-accent-gold" style={{ borderRadius: 'var(--radius-md)', padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}>
               <div>
@@ -76,22 +76,6 @@ export const ResourcesHub: React.FC<{ onOpenLeadModal: (res: any) => void }> = (
               </div>
               <Link to="/resources/7-steps-to-growing-your-business" className="btn btn-secondary" style={{ width: '100%', justifyContent: 'center' }}>
                 <span>View 7-Step Framework &rarr;</span>
-              </Link>
-            </div>
-
-            {/* Tool 3: Glossary */}
-            <div className="card card-accent-top" style={{ borderRadius: 'var(--radius-md)', padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}>
-              <div>
-                <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>Reference Dictionary</span>
-                <h3 style={{ fontSize: 'var(--text-xl)', marginBottom: '0.75rem', color: 'var(--navy-900)', fontWeight: 700 }}>
-                  Accounting &amp; Tax Glossary
-                </h3>
-                <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                  Clear, plain-English definitions of Canadian corporate tax, CCPC rules, CRA forms (PD7A, T2, GIFI), and financial statement terms.
-                </p>
-              </div>
-              <Link to="/resources/glossary" className="btn btn-secondary" style={{ width: '100%', justifyContent: 'center' }}>
-                <span>Browse Glossary (A-Z) &rarr;</span>
               </Link>
             </div>
           </div>

@@ -309,11 +309,6 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/resources/glossary" className="footer-link">
-                  Canadian Business Glossary (A-Z)
-                </Link>
-              </li>
-              <li>
                 <Link to="/resources/downloads" className="footer-link">
                   Free Checklist &amp; Template Downloads
                 </Link>

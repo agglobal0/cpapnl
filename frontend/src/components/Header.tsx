@@ -648,7 +648,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: (isLinkActive('/resources') || isLinkActive('/blog') || isLinkActive('/business-guides') || isLinkActive('/calculators') || isLinkActive('/business-and-accounting-glossary') || resourcesOpen) ? '#FCAC14' : '#1E293B',
+                  color: (isLinkActive('/resources') || isLinkActive('/blog') || isLinkActive('/business-guides') || isLinkActive('/calculators') || resourcesOpen) ? '#FCAC14' : '#1E293B',
                   fontWeight: 700,
                   fontSize: '13.5px',
                   letterSpacing: '0.04em',
@@ -663,7 +663,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                   transition: 'color 0.15s ease'
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#FCAC14')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = (isLinkActive('/resources') || isLinkActive('/blog') || isLinkActive('/business-guides') || isLinkActive('/calculators') || isLinkActive('/business-and-accounting-glossary') || resourcesOpen) ? '#FCAC14' : '#1E293B')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = (isLinkActive('/resources') || isLinkActive('/blog') || isLinkActive('/business-guides') || isLinkActive('/calculators') || resourcesOpen) ? '#FCAC14' : '#1E293B')}
                 aria-expanded={resourcesOpen}
                 aria-haspopup="true"
               >
@@ -814,25 +814,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                       7 STEPS TO GROWING YOUR BUSINESS
                     </Link>
 
-                    <Link
-                      to="/business-and-accounting-glossary"
-                      onClick={() => setResourcesOpen(false)}
-                      style={{
-                        padding: '0.85rem 1.25rem',
-                        color: '#FFFFFF',
-                        fontSize: '13px',
-                        fontWeight: 700,
-                        letterSpacing: '0.04em',
-                        textTransform: 'uppercase',
-                        textDecoration: 'none',
-                        display: 'block',
-                        transition: 'background-color 0.15s ease'
-                      }}
-                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
-                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
-                    >
-                      BUSINESS AND ACCOUNTING GLOSSARY
-                    </Link>
                     <Link
                       to="/resources/tax-deadlines"
                       onClick={() => setResourcesOpen(false)}
@@ -1002,7 +983,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/resources" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>FREE CHECKLIST &amp; TEMPLATE DOWNLOADS</Link>
               <Link to="/calculators" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CALCULATORS</Link>
               <Link to="/resources/7-steps-to-growing-your-business" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>7 STEPS TO GROWING YOUR BUSINESS</Link>
-              <Link to="/business-and-accounting-glossary" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BUSINESS AND ACCOUNTING GLOSSARY</Link>
               <Link to="/resources/tax-deadlines" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>TAX DEADLINE CALENDAR</Link>
             </div>
 
