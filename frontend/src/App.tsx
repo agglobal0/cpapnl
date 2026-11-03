@@ -19,9 +19,7 @@ import { ConsultingTechnology } from './pages/services/ConsultingTechnology';
 import { CloudAccounting } from './pages/services/CloudAccounting';
 import { Partners } from './pages/Partners';
 import { AboutXero } from './pages/partners/AboutXero';
-import { XeroResources } from './pages/partners/XeroResources';
 import { QuickBooksOnline } from './pages/partners/QuickBooksOnline';
-import { QuickBooksResources } from './pages/partners/QuickBooksResources';
 import { ResourcesHub } from './pages/ResourcesHub';
 import { BusinessGuidesPage } from './pages/resources/BusinessGuidesPage';
 import { CalculatorsPage } from './pages/resources/CalculatorsPage';
@@ -119,9 +117,9 @@ export const App: React.FC = () => {
           <Route path="/referrals" element={<ReferralProgramPage onBookConsultation={openBookingModal} />} />
           <Route path="/cloud-accounting" element={<CloudAccounting onBookConsultation={openBookingModal} />} />
           <Route path="/xero" element={<AboutXero />} />
-          <Route path="/xero-resources" element={<XeroResources />} />
+          <Route path="/xero-resources" element={<Navigate to="/xero" replace />} />
           <Route path="/quickbooks-online" element={<QuickBooksOnline />} />
-          <Route path="/quickbooks-resources" element={<QuickBooksResources />} />
+          <Route path="/quickbooks-resources" element={<Navigate to="/quickbooks-online" replace />} />
 
           {/* Resource Center & Sub-tools (Matching live cpapnl.com URLs exactly) */}
           <Route path="/blog" element={<BlogList />} />

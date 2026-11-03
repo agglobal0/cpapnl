@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ShieldCheck, ArrowRight, CheckCircle2, Phone, 
-  ExternalLink, Layers, Users, CreditCard, RefreshCw, BarChart2, Smartphone, BookOpen
+  ExternalLink, Layers, Users, CreditCard, RefreshCw, BarChart2, Smartphone
 } from 'lucide-react';
 
 export const AboutXero: React.FC = () => {
@@ -188,41 +188,6 @@ export const AboutXero: React.FC = () => {
                     </div>
                   );
                 })}
-              </div>
-
-              {/* Xero Resources Banner */}
-              <div 
-                style={{ 
-                  backgroundColor: '#F0F9FF', 
-                  border: '1px solid #BAE6FD', 
-                  borderRadius: '8px', 
-                  padding: '2rem', 
-                  marginBottom: '3rem',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  flexWrap: 'wrap',
-                  gap: '1.5rem'
-                }}
-              >
-                <div style={{ maxWidth: '520px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#0284C7', fontWeight: 800, fontSize: '12.5px', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
-                    <BookOpen size={16} />
-                    <span>Free Educational Library</span>
-                  </div>
-                  <h4 style={{ fontSize: '20px', fontWeight: 800, color: '#0F213A', margin: '0 0 0.5rem' }}>
-                    Explore Our Xero Training &amp; Best Practices
-                  </h4>
-                  <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
-                    Step-by-step guides on invoice branding, bank rules, chart of accounts customization, and reading your balance sheet like a pro.
-                  </p>
-                </div>
-                <div>
-                  <Link to="/xero-resources" className="btn btn-primary" style={{ backgroundColor: '#FCAC14', borderColor: '#FCAC14', color: '#0F294A', fontWeight: 800 }}>
-                    <span>Browse Xero Resources</span>
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
               </div>
 
               {/* Direct Partner Action Box (NO Book a Consultation) */}

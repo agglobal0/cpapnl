@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   ShieldCheck, ArrowRight, CheckCircle2, Phone, 
   ExternalLink, Layers, Users, CreditCard, RefreshCw, 
-  BarChart2, Smartphone, DollarSign, Receipt, FileText, BookOpen
+  BarChart2, Smartphone, DollarSign, Receipt, FileText
 } from 'lucide-react';
 
 export const QuickBooksOnline: React.FC = () => {
@@ -270,44 +270,6 @@ export const QuickBooksOnline: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Link to QuickBooks Resources Library */}
-              <div 
-                style={{ 
-                  backgroundColor: '#EFF6FF', 
-                  border: '1px solid #BFDBFE', 
-                  borderRadius: '12px', 
-                  padding: '1.75rem', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'space-between',
-                  flexWrap: 'wrap',
-                  gap: '1.25rem',
-                  marginBottom: '3rem'
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '10px', backgroundColor: '#004AAD', color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <BookOpen size={24} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F2942', margin: 0 }}>
-                      QuickBooks Tutorials, Guides &amp; Best Practices
-                    </h4>
-                    <p style={{ fontSize: '0.875rem', color: '#4B5563', margin: 0 }}>
-                      Browse our library of step-by-step guides on sales receipts, bank rules, billable expenses, and reconciliations.
-                    </p>
-                  </div>
-                </div>
-                <Link 
-                  to="/quickbooks-resources" 
-                  className="btn btn-primary"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', whiteSpace: 'nowrap' }}
-                >
-                  <span>Explore Resources</span>
-                  <ArrowRight size={16} />
-                </Link>
               </div>
 
               {/* Direct Partner Contact Box */}
