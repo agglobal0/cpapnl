@@ -46,27 +46,11 @@ export const ResourcesHub: React.FC<{ onOpenLeadModal: (res: any) => void }> = (
       {/* 2. Featured Core Tools Grid */}
       <section className="section" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
-            {/* Tool 1: Tax Deadline Calendar */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+            {/* Tool 1: Calculators */}
             <div className="card card-accent-gold" style={{ borderRadius: 'var(--radius-md)', padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}>
               <div>
-                <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>CRA Compliance</span>
-                <h3 style={{ fontSize: 'var(--text-xl)', marginBottom: '0.75rem', color: 'var(--navy-900)', fontWeight: 700 }}>
-                  CRA Tax Deadline Calendar
-                </h3>
-                <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                  Complete key filing &amp; remittance calendar for Ontario corporations, GST/HST deadlines, payroll source deductions, and T2 schedules.
-                </p>
-              </div>
-              <Link to="/resources/tax-deadlines" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>
-                <span>View Tax Calendar &rarr;</span>
-              </Link>
-            </div>
-
-            {/* Tool 2: Calculators */}
-            <div className="card card-accent-top" style={{ borderRadius: 'var(--radius-md)', padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}>
-              <div>
-                <span className="badge badge-navy" style={{ marginBottom: '1rem' }}>Interactive Models</span>
+                <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>Interactive Models</span>
                 <h3 style={{ fontSize: 'var(--text-xl)', marginBottom: '0.75rem', color: 'var(--navy-900)', fontWeight: 700 }}>
                   Financial Calculators
                 </h3>
@@ -74,12 +58,12 @@ export const ResourcesHub: React.FC<{ onOpenLeadModal: (res: any) => void }> = (
                   Interactive tools for Ontario small business tax estimation, equipment loan amortization, break-even targets, and runway burn.
                 </p>
               </div>
-              <Link to="/resources/calculators" className="btn btn-secondary" style={{ width: '100%', justifyContent: 'center' }}>
+              <Link to="/resources/calculators" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>
                 <span>Open Calculators &rarr;</span>
               </Link>
             </div>
 
-            {/* Tool 3: 7 Steps */}
+            {/* Tool 2: 7 Steps */}
             <div className="card card-accent-top" style={{ borderRadius: 'var(--radius-md)', padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}>
               <div>
                 <span className="badge badge-navy" style={{ marginBottom: '1rem' }}>Signature Framework</span>
@@ -95,7 +79,7 @@ export const ResourcesHub: React.FC<{ onOpenLeadModal: (res: any) => void }> = (
               </Link>
             </div>
 
-            {/* Tool 4: Glossary */}
+            {/* Tool 3: Glossary */}
             <div className="card card-accent-top" style={{ borderRadius: 'var(--radius-md)', padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: '#FFFFFF' }}>
               <div>
                 <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>Reference Dictionary</span>
