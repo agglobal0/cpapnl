@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Cloud, CheckCircle2, ShieldCheck, ArrowRight, Phone, 
-  Smartphone, Clock, BarChart3, Lock, Zap, Users, RefreshCw
+  CheckCircle2, ShieldCheck, ArrowRight, Phone, 
+  Smartphone, Clock, BarChart3, Lock, Users, RefreshCw
 } from 'lucide-react';
 
 export const CloudAccounting: React.FC<{ onBookConsultation?: (context?: string) => void }> = () => {
@@ -30,13 +30,8 @@ export const CloudAccounting: React.FC<{ onBookConsultation?: (context?: string)
     },
     {
       icon: BarChart3,
-      title: 'Real-Time Financial Data',
-      desc: 'View live cash balances and operating margins instantly. Have the accurate metrics on hand to make quick, confident business decisions whenever opportunity knocks.'
-    },
-    {
-      icon: Zap,
-      title: 'Accurate Picture of Your Business',
-      desc: 'Making sound decisions requires timely information. We streamline your reporting so you get clean, audit-ready balance sheets and P&Ls by the 15th of every month.'
+      title: 'Real-Time Financial Intelligence',
+      desc: 'View live cash balances and operating margins instantly. We streamline your reporting so you get clean, audit-ready balance sheets and P&Ls by the 15th of every month.'
     },
     {
       icon: RefreshCw,
@@ -49,14 +44,9 @@ export const CloudAccounting: React.FC<{ onBookConsultation?: (context?: string)
       desc: 'No more emailing heavy desktop backup files. We access your cloud ledger simultaneously to provide timely tax advice, reconciliations, and strategic adjustments.'
     },
     {
-      icon: Cloud,
-      title: 'Go 100% Paperless & Streamline Operations',
-      desc: 'Capture receipts with your camera and file vendor bills digitally. Going paperless keeps every expense receipt matched and CRA audit-ready for 7 years.'
-    },
-    {
       icon: Lock,
-      title: 'Bank-Grade Cloud Security',
-      desc: 'Your data is protected by multi-layered bank-grade encryption and automated cloud backups. Even if a laptop is lost or damaged, your books remain completely secure.'
+      title: 'Bank-Grade Cloud Security & Backup',
+      desc: 'Your data is protected by multi-layered 256-bit encryption and automated cloud backups. Even if hardware is lost or damaged, your books remain 100% safe and CRA audit-ready.'
     }
   ];
 
@@ -130,7 +120,7 @@ export const CloudAccounting: React.FC<{ onBookConsultation?: (context?: string)
                 Whether you run an established enterprise or a fast-growing startup, we select, configure, and manage cloud accounting platforms tailored to your industry. You get clear numbers, instant invoicing, and total peace of mind.
               </p>
 
-              {/* 8 Benefit Cards Grid */}
+              {/* 6 Benefit Cards Grid */}
               <h3 style={{ fontSize: '24px', color: 'var(--navy-900)', fontWeight: 800, marginBottom: '1.5rem', letterSpacing: '-0.01em' }}>
                 Benefits of Cloud Accounting Software
               </h3>
