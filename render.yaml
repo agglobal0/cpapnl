@@ -11,13 +11,12 @@ services:
         source: /*
         destination: /index.html
 
-  # 2. Backend PHP API Service
+  # 2. Backend PHP API Service (via Docker)
   - type: web
     name: cpapnl-backend
-    runtime: php
+    runtime: docker
+    dockerfilePath: backend/Dockerfile
     rootDir: backend
-    buildCommand: ""
-    startCommand: php -S 0.0.0.0:$PORT -t public
     envVars:
       - key: APP_ENV
         value: production

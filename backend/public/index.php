@@ -1,5 +1,13 @@
 <?php
 
+// Allow static file serving when using PHP built-in web server
+if (php_sapi_name() === 'cli-server') {
+    $reqPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if ($reqPath !== '/' && file_exists(__DIR__ . $reqPath) && is_file(__DIR__ . $reqPath)) {
+        return false;
+    }
+}
+
 require_once __DIR__ . '/../src/Middleware/CorsMiddleware.php';
 require_once __DIR__ . '/../src/Middleware/RateLimitMiddleware.php';
 require_once __DIR__ . '/../src/Controllers/AuthController.php';
