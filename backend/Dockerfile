@@ -6,14 +6,13 @@ RUN apk add --no-cache sqlite-dev \
 
 WORKDIR /app
 
-# Copy backend code
+# Copy backend code (includes public/ with full website and API)
 COPY . /app
 
 # Ensure storage & database directories exist with write permissions
 RUN mkdir -p /app/storage/private/uploads /app/database \
     && chmod -R 777 /app/storage /app/database
 
-# Default port for Render (Render sets $PORT dynamically)
 ENV PORT=10000
 EXPOSE 10000
 

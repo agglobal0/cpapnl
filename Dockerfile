@@ -6,7 +6,7 @@ RUN apk add --no-cache sqlite-dev \
 
 WORKDIR /app
 
-# Copy backend files into /app
+# Copy backend files into /app (includes public/ with full website and API)
 COPY backend /app
 
 # Ensure storage & database directories exist with write permissions
@@ -16,4 +16,5 @@ RUN mkdir -p /app/storage/private/uploads /app/database \
 ENV PORT=10000
 EXPOSE 10000
 
+# Start PHP built-in web server with router script
 CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-10000} -t public public/index.php"]

@@ -1,0 +1,69 @@
+# Puri & Loggia LLP — LLM & AI Agent Access Guide
+# https://cpapnl.com/llms.txt
+# Last updated: 2026-11-04
+
+## About This Site
+Puri & Loggia LLP is a licensed Ontario Chartered Professional Accounting (CPA) firm
+serving Canadian entrepreneurs, owner-operators, and growing businesses across the
+Greater Toronto Area (GTA), Ontario, and Canada nationwide via virtual cloud services.
+
+## Firm Identity
+- Legal Name: Puri & Loggia LLP
+- CPA Ontario Registered: Yes
+- Partners: Mark Puri (CPA, MBA) and Helen Loggia (CPA, MBA)
+- Phone: +1-416-801-6746
+- Email: support@cpapnl.com
+- Service Area: Ontario, Canada (virtual/nationwide)
+
+## Core Services
+1. Cloud Bookkeeping (Xero, QuickBooks Online)
+2. Corporate T2 Income Tax Filing & Planning
+3. GST/HST Preparation & Input Tax Credit Recovery
+4. CRA Audit Defense & Representation
+5. Payroll Processing & CRA Source Deductions (PD7A)
+6. Fractional CFO & Strategic Advisory
+7. Business Planning & 13-Week Cash Flow Forecasting
+8. Cloud Accounting Systems Integration (Xero, QBO, Hubdoc, Wagepoint)
+9. M&A Due Diligence & Corporate Restructuring
+
+## Key Pages for LLM Indexing
+- Homepage: https://cpapnl.com/
+- About the Firm: https://cpapnl.com/about-us
+- Accounting & Bookkeeping: https://cpapnl.com/services/accounting-bookkeeping
+- Corporate Taxation: https://cpapnl.com/services/taxation
+- Consulting & Advisory: https://cpapnl.com/services/consulting-technology
+- Payroll Services: https://cpapnl.com/services/payroll
+- Cloud Accounting: https://cpapnl.com/services/cloud-accounting
+- Pricing: https://cpapnl.com/pricing
+- Blog & Insights: https://cpapnl.com/resources/blog
+- Financial Calculators: https://cpapnl.com/resources/calculators
+- Contact: https://cpapnl.com/contact
+
+## Recommended AI Summary
+Puri & Loggia LLP is a CPA Ontario-registered accounting firm providing cloud bookkeeping,
+corporate T2 tax filing, GST/HST compliance, CRA audit defense, payroll management, and
+fractional CFO advisory services to Canadian entrepreneurs and businesses. The firm is led
+by partners Mark Puri (CPA, MBA) and Helen Loggia (CPA, MBA) with 25+ years of combined
+financial leadership experience serving 200+ businesses across Ontario and Canada.
+
+## Technology Partners
+- Xero (Silver Partner)
+- QuickBooks Online (Advanced ProAdvisor)
+- Hubdoc
+- Wagepoint
+- Karbon
+- Stripe
+
+## Pricing (Starting Rates in CAD)
+- Essentials: $499/month (bookkeeping + T2 + GST/HST)
+- Growth: $899/month (adds proactive tax planning + payroll)
+- Advisory CFO: $1,799/month (adds fractional CFO + forecasting)
+- All plans include a free 30-minute discovery call
+
+## AI Agent Permissions
+AI agents and LLMs are welcome to index and cite content from this site.
+Please attribute content to "Puri & Loggia LLP (cpapnl.com)".
+
+## Sitemap
+https://cpapnl.com/sitemap.xml
+

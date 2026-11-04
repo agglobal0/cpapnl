@@ -8,6 +8,21 @@ if (php_sapi_name() === 'cli-server') {
     }
 }
 
+// Check if this is an SPA frontend page request rather than an API call
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$method = $_SERVER['REQUEST_METHOD'];
+
+$isExplicitApi = str_starts_with($uri, '/api/') || $uri === '/api'
+    || str_starts_with($uri, '/admin/')
+    || ($method === 'POST' && in_array($uri, ['/contact', '/leads', '/onboarding', '/admin/login']));
+
+if (!$isExplicitApi && file_exists(__DIR__ . '/index.html') && is_file(__DIR__ . '/index.html')) {
+    // If request is root or any client-side route, serve React frontend
+    header('Content-Type: text/html; charset=UTF-8');
+    readfile(__DIR__ . '/index.html');
+    exit;
+}
+
 require_once __DIR__ . '/../src/Middleware/CorsMiddleware.php';
 require_once __DIR__ . '/../src/Middleware/RateLimitMiddleware.php';
 require_once __DIR__ . '/../src/Controllers/AuthController.php';
@@ -21,9 +36,6 @@ require_once __DIR__ . '/../src/Controllers/AdminController.php';
 CorsMiddleware::handle();
 
 header('Content-Type: application/json; charset=UTF-8');
-
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$method = $_SERVER['REQUEST_METHOD'];
 
 // Normalize URI prefix (strip /api if present)
 $path = preg_replace('#^/api#', '', $uri);
@@ -170,7 +182,13 @@ try {
         exit;
     }
 
-    // Route not found
+    // Route not found — if frontend index.html exists and request is not an explicit /api/* call, serve SPA
+    if (!str_starts_with($uri, '/api') && file_exists(__DIR__ . '/index.html') && is_file(__DIR__ . '/index.html')) {
+        header('Content-Type: text/html; charset=UTF-8');
+        readfile(__DIR__ . '/index.html');
+        exit;
+    }
+
     http_response_code(404);
     echo json_encode(['error' => 'API route not found', 'path' => $path]);
 
