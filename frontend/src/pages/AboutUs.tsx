@@ -1,17 +1,15 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Award, CheckCircle2, Phone, Mail, ArrowRight, TrendingUp, BookOpen, Users, Compass, Check, Sparkles, Building2 } from 'lucide-react';
+import { setPageSEO } from '../services/seo';
 
 export const AboutUs: React.FC<{ onBookConsultation?: (context?: string) => void }> = () => {
   useEffect(() => {
-    document.title = 'About Us | Puri & Loggia LLP - Chartered Professional Accountants in Toronto';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Learn about Puri & Loggia LLP, a Greater Toronto Area CPA firm established through the 2019 merger of Mark Puri and Helen Loggia. 25+ years of senior executive and public accounting experience serving Canadian entrepreneurs.'
-      );
-    }
+    setPageSEO({
+      title: 'About Us | Puri & Loggia LLP — Chartered Professional Accountants',
+      description: 'Meet Mark Puri (CPA, MBA) and Helen Loggia (CPA, MBA) — 25+ years of senior financial leadership, entrepreneurial perspective, and CPA Ontario excellence serving Canadian businesses.',
+      canonical: 'https://cpapnl.com/about-us',
+    });
   }, []);
 
   return (

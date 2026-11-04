@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { api } from '../services/api';
 import { trackEvent } from '../services/analytics';
+import { setPageSEO } from '../services/seo';
 
 interface Props {
   onBookConsultation?: (context?: string) => void;
@@ -14,14 +15,11 @@ interface Props {
 
 export const PricingPage: React.FC<Props> = ({ onBookConsultation }) => {
   useEffect(() => {
-    document.title = 'Transparent CPA Pricing & Custom Quote Builder | Puri & Loggia LLP';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Transparent, fixed monthly CPA accounting packages for Ontario and Canadian businesses. Calculate your custom monthly estimate with our interactive quote builder.'
-      );
-    }
+    setPageSEO({
+      title: 'CPA Accounting Pricing & Quote Builder | Puri & Loggia LLP',
+      description: 'Transparent fixed monthly CPA accounting packages from $499/mo. Use our interactive quote builder to calculate your custom monthly estimate for Ontario businesses.',
+      canonical: 'https://cpapnl.com/pricing',
+    });
   }, []);
 
   // Mode: 'packages' or 'calculator'

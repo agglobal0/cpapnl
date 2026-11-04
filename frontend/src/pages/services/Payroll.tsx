@@ -1,14 +1,17 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ArrowRight, Phone, Users, Clock, ShieldCheck, Calculator, FileText, AlertTriangle } from 'lucide-react';
+import { setPageSEO } from '../../services/seo';
 
 interface Props { onBookConsultation: (ctx?: string) => void; }
 
 export const Payroll: React.FC<Props> = ({ onBookConsultation }) => {
   useEffect(() => {
-    document.title = 'Payroll Services for Ontario Small Business — CRA Remittance & T4 | Puri & Loggia LLP';
-    const m = document.querySelector('meta[name="description"]');
-    if (m) m.setAttribute('content', 'Full-service payroll management for Ontario small businesses. CRA payroll deductions (PD7A), T4 slips, ROE filing, WSIB/EHT, and payroll setup in Wagepoint or QuickBooks. Brampton & GTA CPA firm.');
+    setPageSEO({
+      title: 'Payroll Services Ontario | CRA Remittance & T4 | Puri & Loggia',
+      description: 'Full-service payroll for Ontario businesses. CRA source deductions (PD7A), T4 slips, ROE filing, WSIB/EHT, and payroll setup in Wagepoint or QuickBooks Online.',
+      canonical: 'https://cpapnl.com/services/payroll',
+    });
   }, []);
 
   const features = [

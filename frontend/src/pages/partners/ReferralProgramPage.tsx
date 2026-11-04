@@ -69,16 +69,10 @@ export const ReferralProgramPage: React.FC<Props> = ({ onBookConsultation }) => 
         'We advise realtors and property investors on PREC incorporation, HST on new residential developments, assignment sales, and holding company structures.',
     },
     {
-      icon: <Landmark size={24} color="#FCAC14" />,
-      title: 'Mortgage Brokers & Lenders',
-      description:
-        'We deliver rapid, verified Notice of Assessment (NOA) packages, T2 corporate tax returns, and compilation financial statements to expedite commercial & residential financing.',
-    },
-    {
       icon: <Briefcase size={24} color="#FCAC14" />,
-      title: 'Financial Planners & Wealth Advisors',
+      title: 'Financial Planners, Mortgage Brokers & Lenders',
       description:
-        'We coordinate corporate estate freezes, family trust distributions, capital dividend account (CDA) extractions, and corporate-owned life insurance optimization.',
+        'We deliver rapid Notice of Assessment (NOA) packages, compilation financial statements, corporate estate freezes, capital dividend account (CDA) extractions, and lender compliance.',
     },
   ];
 
@@ -277,7 +271,7 @@ export const ReferralProgramPage: React.FC<Props> = ({ onBookConsultation }) => 
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             {partnerTypes.map((pt, i) => (
               <div
                 key={i}

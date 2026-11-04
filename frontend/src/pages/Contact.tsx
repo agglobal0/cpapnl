@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, CheckCircle2, ShieldCheck, ExternalLink, Send } from 'lucide-react';
 import { api } from '../services/api';
 import { trackEvent } from '../services/analytics';
+import { setPageSEO } from '../services/seo';
 
 export const Contact: React.FC<{ onBookConsultation?: (context?: string) => void }> = () => {
+  useEffect(() => {
+    setPageSEO({
+      title: 'Contact Puri & Loggia LLP | Schedule a Free Consultation',
+      description: 'Get in touch with our Toronto/Ontario CPA team at +1 416 801 6746 or book a free introductory video consultation with our partners today.',
+      canonical: 'https://cpapnl.com/contact',
+    });
+  }, []);
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -312,7 +321,13 @@ export const Contact: React.FC<{ onBookConsultation?: (context?: string) => void
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit}>
+              <form 
+                onSubmit={handleSubmit}
+                name="contact-inquiry"
+                aria-label="Contact inquiry form"
+                toolname="Contact Puri & Loggia LLP"
+                tooldescription="Send a contact inquiry to Puri & Loggia LLP CPAs for accounting, tax, and advisory services"
+              >
                 {errorMsg && (
                   <div
                     style={{

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Share2, Mail, Copy, Check, ShieldCheck } from 'lucide-react';
 import { api, BlogPostItem, DEFAULT_BLOG_POSTS } from '../../services/api';
+import { setPageSEO } from '../../services/seo';
 
 export const BlogPost: React.FC<{ onBookConsultation: (context?: string) => void }> = ({ onBookConsultation }) => {
   const { slug } = useParams<{ slug: string }>();
@@ -11,8 +12,16 @@ export const BlogPost: React.FC<{ onBookConsultation: (context?: string) => void
   useEffect(() => {
     if (slug) {
       api.getBlogPostBySlug(slug).then(p => {
-        if (p) setPost(p);
-        else setPost(DEFAULT_BLOG_POSTS[0]);
+        if (p) {
+          setPost(p);
+          setPageSEO({
+            title: `${p.title.slice(0, 55)} | Puri & Loggia LLP`,
+            description: p.excerpt.slice(0, 155),
+            canonical: `https://cpapnl.com/resources/blog/${p.slug}`,
+          });
+        } else {
+          setPost(DEFAULT_BLOG_POSTS[0]);
+        }
       });
     }
   }, [slug]);

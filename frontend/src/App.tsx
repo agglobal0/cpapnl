@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { Breadcrumbs } from './components/Breadcrumbs';
 import { BookingModal } from './components/BookingModal';
 import { LeadModal } from './components/LeadModal';
 import { StripeModal } from './components/StripeModal';
@@ -78,8 +79,9 @@ export const App: React.FC = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {!isAdminRoute && <Header onBookConsultation={openBookingModal} />}
+      {!isAdminRoute && <Breadcrumbs />}
 
-      <main style={{ flex: 1 }}>
+      <main id="main-content" style={{ flex: 1 }}>
         <Routes>
           {/* Core Public Pages */}
           <Route 

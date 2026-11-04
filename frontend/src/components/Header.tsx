@@ -192,20 +192,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                     <span>QuickBooks Online Login</span>
                     <ExternalLink size={13} color="#0D9488" />
                   </a>
-                  <div style={{ height: '1px', backgroundColor: 'var(--border-light)', margin: '0.4rem 0' }} />
-                  <Link
-                    to="/client-area"
-                    style={{
-                      display: 'block',
-                      padding: '0.5rem 0.75rem',
-                      color: 'var(--gold-600)',
-                      fontSize: '12px',
-                      fontWeight: 700,
-                      textAlign: 'center'
-                    }}
-                  >
-                    Portal Access Guide &rarr;
-                  </Link>
                 </div>
               )}
             </div>
@@ -736,27 +722,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                     </Link>
 
                     <Link
-                      to="/resources"
-                      onClick={() => setResourcesOpen(false)}
-                      style={{
-                        padding: '0.85rem 1.25rem',
-                        color: '#FFFFFF',
-                        fontSize: '13px',
-                        fontWeight: 700,
-                        letterSpacing: '0.04em',
-                        textTransform: 'uppercase',
-                        textDecoration: 'none',
-                        display: 'block',
-                        transition: 'background-color 0.15s ease',
-                        borderBottom: '1px solid rgba(255, 255, 255, 0.18)'
-                      }}
-                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
-                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
-                    >
-                      FREE CHECKLIST &amp; TEMPLATE DOWNLOADS
-                    </Link>
-
-                    <Link
                       to="/calculators"
                       onClick={() => setResourcesOpen(false)}
                       style={{
@@ -942,7 +907,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BLOG</Link>
               <Link to="/business-guides" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>BUSINESS GUIDES</Link>
               <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CLIENT CASE STUDIES</Link>
-              <Link to="/resources" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>FREE CHECKLIST &amp; TEMPLATE DOWNLOADS</Link>
               <Link to="/calculators" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>CALCULATORS</Link>
               <Link to="/resources/7-steps-to-growing-your-business" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>7 STEPS TO GROWING YOUR BUSINESS</Link>
             </div>

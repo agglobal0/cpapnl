@@ -4,17 +4,15 @@ import {
   CheckCircle2, ArrowRight, ShieldCheck, Compass, 
   Cpu, Phone, TrendingUp, Layers, Users, Sparkles, Building2, Check, RefreshCw
 } from 'lucide-react';
+import { setPageSEO } from '../../services/seo';
 
 export const ConsultingTechnology: React.FC<{ onBookConsultation: (context?: string) => void }> = () => {
   useEffect(() => {
-    document.title = 'Business Consulting & Accounting Technology Services Ontario | Puri & Loggia LLP';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Simplify your business strategy and accounting technology with Puri & Loggia LLP. Financial forecasting, process optimization, Xero & QBO software implementation, and systems integration across Ontario.'
-      );
-    }
+    setPageSEO({
+      title: 'Fractional CFO & Advisory Services | Puri & Loggia LLP',
+      description: 'Strategic financial modeling, cash flow forecasting, M&A advisory, cloud software implementation, and operational growth advisory led by seasoned Ontario CPAs.',
+      canonical: 'https://cpapnl.com/services/consulting-technology',
+    });
   }, []);
 
   return (

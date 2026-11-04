@@ -5,4 +5,30 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /storage/
 
+# AI & LLM crawlers — explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 Sitemap: https://cpapnl.com/sitemap.xml
+Sitemap: https://cpapnl.com/llms.txt

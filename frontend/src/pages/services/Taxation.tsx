@@ -4,17 +4,15 @@ import {
   CheckCircle2, ArrowRight, ShieldCheck, ChevronDown, 
   ChevronUp, Phone, Calculator, FileCheck, AlertCircle, Award, Check
 } from 'lucide-react';
+import { setPageSEO } from '../../services/seo';
 
 export const Taxation: React.FC<{ onBookConsultation: (context?: string) => void }> = () => {
   useEffect(() => {
-    document.title = 'Corporate Tax & Strategic Tax Planning Ontario | Puri & Loggia LLP';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Simplify your corporate tax obligations with Puri & Loggia LLP. T2 corporate returns, GST/HST filing, owner salary vs dividend planning, and CRA audit representation across Ontario.'
-      );
-    }
+    setPageSEO({
+      title: 'Corporate Tax Planning & CRA Compliance | Puri & Loggia LLP',
+      description: 'Proactive T2 corporate tax filing, GST/HST preparation, owner salary vs dividend optimization, and CRA audit defense for Canadian businesses across Ontario.',
+      canonical: 'https://cpapnl.com/services/taxation',
+    });
   }, []);
 
   // Accordion state matching the authentic live site's collapseBlock

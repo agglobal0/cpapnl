@@ -77,13 +77,25 @@ export const Footer: React.FC = () => {
 
           <div style={{ width: '100%', maxWidth: '420px' }}>
             {!subscribeSuccess ? (
-              <form onSubmit={handleNewsletterSubmit} style={{ display: 'flex', gap: '0.5rem', width: '100%' }}>
+              <form 
+                id="footer-newsletter-form"
+                name="footer-newsletter-form"
+                onSubmit={handleNewsletterSubmit} 
+                style={{ display: 'flex', gap: '0.5rem', width: '100%' }}
+                aria-label="Canadian tax and business briefing newsletter form"
+                toolname="subscribeNewsletter"
+                tooldescription="Subscribe to the bi-weekly Canadian Tax & Business Briefing newsletter"
+              >
                 <input
+                  id="newsletter-email"
+                  name="email"
                   type="email"
                   placeholder="Enter your business email"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   required
+                  aria-label="Business email address for newsletter subscription"
+                  toolparamdescription="Email address of the subscriber"
                   style={{
                     flex: 1,
                     minWidth: 0,

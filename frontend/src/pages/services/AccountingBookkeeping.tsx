@@ -4,17 +4,15 @@ import {
   CheckCircle2, ArrowRight, ShieldCheck, Phone, Mail, 
   FileText, Check, Clock, Layers, Sparkles, Building2, BarChart3
 } from 'lucide-react';
+import { setPageSEO } from '../../services/seo';
 
 export const AccountingBookkeeping: React.FC<{ onBookConsultation: (context?: string) => void }> = () => {
   useEffect(() => {
-    document.title = 'Accounting & Bookkeeping Services Toronto & Ontario | Puri & Loggia LLP';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Simplify your bookkeeping with Puri & Loggia LLP. Automated cloud accounting in Xero & QuickBooks Online, bank reconciliations, payroll, and accurate monthly reports for Canadian businesses.'
-      );
-    }
+    setPageSEO({
+      title: 'Accounting & Cloud Bookkeeping Services Ontario | Puri & Loggia',
+      description: 'Eliminate messy books and delayed reconciliations. Automated cloud bookkeeping in Xero & QuickBooks Online, payroll, and accurate monthly financials for Canadian businesses.',
+      canonical: 'https://cpapnl.com/services/accounting-bookkeeping',
+    });
   }, []);
 
   return (

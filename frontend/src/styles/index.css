@@ -1,5 +1,22 @@
 @import './design-tokens.css';
 
+/* Skip to Content for Accessibility & AI Navigation */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  background: #FCAC14;
+  color: #0F294A;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+.skip-to-content:focus {
+  left: 0;
+}
+
 /* Universal Reset & Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;

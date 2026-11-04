@@ -4,17 +4,15 @@ import {
   CheckCircle2, ShieldCheck, ArrowRight, Phone, 
   Smartphone, Clock, BarChart3, Lock, Users, RefreshCw
 } from 'lucide-react';
+import { setPageSEO } from '../../services/seo';
 
 export const CloudAccounting: React.FC<{ onBookConsultation?: (context?: string) => void }> = () => {
   useEffect(() => {
-    document.title = 'Cloud Accounting Software & Setup Ontario | Puri & Loggia LLP';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        'Modernize your business finances with automated cloud accounting in Xero and QuickBooks Online. Real-time bank feeds, touchless receipt capture, and CPA support.'
-      );
-    }
+    setPageSEO({
+      title: 'Cloud Accounting & Modern Systems Integration | Puri & Loggia',
+      description: 'Seamless migration to Xero, QuickBooks Online, Hubdoc, and Wagepoint. Build a paperless, automated financial back-office for your Ontario business.',
+      canonical: 'https://cpapnl.com/services/cloud-accounting',
+    });
   }, []);
 
   const BENEFITS = [
