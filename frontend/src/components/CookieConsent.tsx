@@ -71,11 +71,50 @@ export const CookieConsent: React.FC = () => {
         </Link>.
       </p>
 
-      <div style={{ display: 'flex', gap: '0.6rem', justifyContent: 'flex-end', marginTop: '0.25rem' }}>
-        <button onClick={handleDecline} className="btn btn-secondary-dark btn-sm">
+      <div style={{ display: 'flex', gap: '0.6rem', justifyContent: 'flex-end', marginTop: '0.35rem', flexWrap: 'wrap' }}>
+        <button 
+          type="button"
+          onClick={handleDecline} 
+          style={{
+            backgroundColor: 'transparent',
+            color: '#FFFFFF',
+            border: '1px solid rgba(255, 255, 255, 0.35)',
+            borderRadius: '4px',
+            padding: '0.5rem 1rem',
+            fontSize: '13px',
+            fontWeight: 600,
+            cursor: 'pointer',
+            transition: 'all 0.15s ease',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.35)';
+          }}
+        >
           Essential Only
         </button>
-        <button onClick={handleAccept} className="btn btn-primary btn-sm">
+        <button 
+          type="button"
+          onClick={handleAccept} 
+          style={{
+            backgroundColor: '#FCAC14',
+            color: '#0F294A',
+            border: 'none',
+            borderRadius: '4px',
+            padding: '0.5rem 1.25rem',
+            fontSize: '13px',
+            fontWeight: 800,
+            cursor: 'pointer',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+            transition: 'background-color 0.15s ease',
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#E09910')}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#FCAC14')}
+        >
           Accept All
         </button>
       </div>
