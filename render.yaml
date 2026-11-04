@@ -1,0 +1,25 @@
+services:
+  # 1. Frontend Static Site
+  - type: web
+    name: cpapnl-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+  # 2. Backend PHP API Service
+  - type: web
+    name: cpapnl-backend
+    runtime: php
+    rootDir: backend
+    buildCommand: ""
+    startCommand: php -S 0.0.0.0:$PORT -t public
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DB_CONNECTION
+        value: sqlite
