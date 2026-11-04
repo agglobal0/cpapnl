@@ -223,14 +223,40 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
         }}
         aria-label="Main Navigation"
       >
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          {/* Logo on Left */}
-          <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+        <div 
+          className="container" 
+          style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            gap: '1.5rem',
+          }}
+        >
+          {/* Logo on Left with dedicated breathing room / indentation */}
+          <Link 
+            to="/" 
+            style={{ 
+              textDecoration: 'none', 
+              display: 'flex', 
+              alignItems: 'center',
+              flexShrink: 0,
+              marginRight: '1.75rem'
+            }}
+          >
             <Logo variant="light" height={isScrolled ? 54 : 64} />
           </Link>
 
           {/* Desktop Navigation Links in clean uppercase, with gold active state */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(1rem, 1.8vw, 2.2rem)', whiteSpace: 'nowrap' }} className="nav-desktop">
+          <div 
+            style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: 'clamp(0.85rem, 1.5vw, 1.9rem)', 
+              whiteSpace: 'nowrap',
+              flexShrink: 0
+            }} 
+            className="nav-desktop"
+          >
             <Link 
               to="/" 
               style={{ 
@@ -243,7 +269,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 lineHeight: 1,
-                padding: '0.5rem 0',
+                padding: '0.5rem 0.2rem',
                 transition: 'color 0.15s ease'
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#D97706')}
@@ -264,7 +290,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 lineHeight: 1,
-                padding: '0.5rem 0',
+                padding: '0.5rem 0.2rem',
                 transition: 'color 0.15s ease'
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#D97706')}
@@ -796,28 +822,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               )}
             </div>
 
-            {/* Blog Link */}
-            <Link 
-              to="/blog" 
-              style={{ 
-                color: (isLinkActive('/blog') || isLinkActive('/resources/blog')) ? '#FCAC14' : '#1E293B', 
-                fontWeight: 700, 
-                fontSize: '13.5px',
-                letterSpacing: '0.04em',
-                textTransform: 'uppercase',
-                whiteSpace: 'nowrap',
-                display: 'inline-flex',
-                alignItems: 'center',
-                lineHeight: 1,
-                padding: '0.5rem 0',
-                transition: 'color 0.15s ease'
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#FCAC14')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = (isLinkActive('/blog') || isLinkActive('/resources/blog')) ? '#FCAC14' : '#1E293B')}
-            >
-              Blog
-            </Link>
-
             {/* Pricing Link */}
             <Link 
               to="/pricing" 
@@ -831,7 +835,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 lineHeight: 1,
-                padding: '0.5rem 0',
+                padding: '0.5rem 0.2rem',
                 transition: 'color 0.15s ease'
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#D97706')}
@@ -853,7 +857,7 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 lineHeight: 1,
-                padding: '0.5rem 0',
+                padding: '0.5rem 0.2rem',
                 transition: 'color 0.15s ease'
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#D97706')}
@@ -943,7 +947,6 @@ export const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <Link to="/resources/7-steps-to-growing-your-business" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--navy-900)', fontSize: '14px', fontWeight: 700, textTransform: 'uppercase' }}>7 STEPS TO GROWING YOUR BUSINESS</Link>
             </div>
 
-            <Link to="/blog" onClick={() => setMobileMenuOpen(false)} style={{ color: (isLinkActive('/blog') || isLinkActive('/resources/blog')) ? '#D97706' : 'var(--navy-900)', fontWeight: 700, fontSize: '15px' }}>BLOG</Link>
             <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} style={{ color: isLinkActive('/pricing') ? '#D97706' : 'var(--navy-900)', fontWeight: 700, fontSize: '15px' }}>PRICING</Link>
             <Link to="/contact" style={{ color: '#D97706', fontWeight: 700, fontSize: '15px' }}>CONTACT</Link>
             <Link to="/client-area" style={{ color: 'var(--navy-800)', fontWeight: 700, fontSize: '15px' }}>CLIENT AREA (XERO &amp; QBO)</Link>
